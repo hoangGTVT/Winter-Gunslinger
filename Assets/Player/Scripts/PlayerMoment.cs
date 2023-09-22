@@ -19,7 +19,7 @@ public class PlayerMoment : MonoBehaviour
         controls.Land.Move.performed += ctx =>
         {
             dir = ctx.ReadValue<float>();
-            Debug.Log("A");
+           
         };
         controls.Land.Jump.performed += ctx => Jump();
         
@@ -33,8 +33,7 @@ public class PlayerMoment : MonoBehaviour
     void Update()
     {
         PlayerAnimation.rb.velocity = new Vector2(PlayerMoment.dir * PlayerMoment.moveSpeed, PlayerAnimation.rb.velocity.y);
-        //Vector3 move = new Vector3(dir, 0,0);
-        // transform.parent.position += move * moveSpeed * Time.deltaTime;
+        
         
     }
     private bool IsGrounded()

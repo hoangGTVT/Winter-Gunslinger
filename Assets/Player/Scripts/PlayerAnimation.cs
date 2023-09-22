@@ -10,21 +10,22 @@ public class PlayerAnimation : MonoBehaviour
     public static BoxCollider2D coll;
     PlayerControls controls;
     bool shoot = false;
-    public  enum MovementState { idle, shoot, attack,run,hit,fall}
+   
+    public bool h_IsRight = true;
+    private  enum MovementState { idle, shoot, attack,run,hit,fall}
+
+   
     private void Awake()
     {
         controls = new PlayerControls();
         controls.Enable();
 
-        controls.Land.Shoot.performed += ctx =>
+        controls.Land.Shoot.performed += ctx => 
         {
-            shoot = true;
+            shoot = true;  
+
         };
-
-
-
-
-
+        
 
     }
 
@@ -34,38 +35,32 @@ public class PlayerAnimation : MonoBehaviour
         animator = GetComponent<Animator>();
         sp = GetComponent<SpriteRenderer>();
         coll = GetComponent<BoxCollider2D>();
+       
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
         UpdateAnimation();
-        if (Input.GetKeyDown(KeyCode.K)){
-            MovementState state;
-
-            state = MovementState.shoot;
-
-            animator.SetInteger("State", (int)state);
-        }
+        IsRotate();
+            
     }
     private void UpdateAnimation()
     {
         MovementState state;
-        if (PlayerMoment.dir > 0f)
+        if (PlayerMoment.dir == 0f )
         {
-            state = MovementState.run;
-            PlayerAnimation.sp.flipX = false;
-           
-        }
-        else if (PlayerMoment.dir < 0f)
-        {
-            PlayerAnimation.sp.flipX = true;
-            state = MovementState.run;
+       
+            state = MovementState.idle;
         }
         else
         {
-            state = MovementState.idle;
+           
+                 state = MovementState.run;
         }
+
         if (rb.velocity.y > .1f)
         {
 
@@ -80,11 +75,34 @@ public class PlayerAnimation : MonoBehaviour
         if (shoot == true)
         {
             state = MovementState.shoot;
-            shoot = false;
+            Shooting();
         }
+
+       
         animator.SetInteger("State", (int)state);
 
 
     }
-   
+    private void IsRotate()
+    {
+        if(PlayerMoment.dir>0 && !h_IsRight)
+        {
+            Filp();
+        }else if(PlayerMoment.dir<0 && h_IsRight)
+        {
+            Filp();
+        }
+    }
+    public void Filp()
+    {
+        h_IsRight= !h_IsRight;
+        transform.Rotate(0, 180, 0);
+    }
+    public void Shooting()
+    {
+        Waepon waepon=GetComponent<Waepon>();
+        shoot = false;
+        waepon.Shoot();
+    }
+
 }

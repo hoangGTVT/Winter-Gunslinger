@@ -1,0 +1,3035 @@
+fileFormatVersion: 2
+guid: 2ec10039e96575543a8cb5c344a0a183
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 200
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 572
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90e8be042d1bde4a883fac17421c8ca
+      internalID: -430409866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 565
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c733a58b79a87e4b9841e03e618d81d
+      internalID: -797880817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 558
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e950f0fd573674ea3d6d8c0fadde2f
+      internalID: 748558468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 552
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb60e416426db0e41b8954379e66c7eb
+      internalID: 1143341503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_4
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 546
+        width: 75
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597f688d6c274bb4694a02dbcb05780b
+      internalID: 1518800357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 408
+        width: 87
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e620011279dcb42ba02478fe5eab14
+      internalID: 1245881613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_6
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 405
+        width: 94
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aec86a479bcfa40bc6857f1f8a267d
+      internalID: 1624183220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_7
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 499
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65af158ce76b7af43b5aaaddcfce709d
+      internalID: -2013556597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 403
+        width: 102
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b13934adb589730469a57ae1bd34d365
+      internalID: 1695668577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_9
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 400
+        width: 107
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2388638e18a1f1440a5614a833454522
+      internalID: -1967081392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 412
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feffc9dd1da813044a2496de9e8f0e3d
+      internalID: -2144764033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 443
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f87ab0cabdcff44a85adeab2e5ea270
+      internalID: -1351250030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_12
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 442
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489f06102eb263740a438c8dcadaa95b
+      internalID: -1604387510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_13
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 441
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91daa40ab3a77e4ebf267c17e4d18af
+      internalID: -1511078803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_14
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 158
+        width: 111
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623c13027f02abd4cbdc21769ae9bc78
+      internalID: -862044404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 362
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75da840b900c6b4eaac9c03657523e6
+      internalID: -672224264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_16
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 145
+        width: 124
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489ad65dc18b9954a86bd9be03ea68f9
+      internalID: -1278568406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_17
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 366
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbb5c781cbf51e4c88aa4d38830710d
+      internalID: 1255397389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_18
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 130
+        width: 121
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3e93af75bf86a4181cfdd37ef1a73f
+      internalID: -342431261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_19
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 369
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75fbaf62afb13e4caae01a35cb95271
+      internalID: 461635337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_20
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 130
+        width: 131
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4614201a63dba6048b31dca8a9cd5743
+      internalID: -160203392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_21
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 370
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb172443cbb18a41b25f98b8e27bb78
+      internalID: 634077017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_22
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 365
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8c5a8b48d5b594db802390582c1d70
+      internalID: 858852003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_23
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 368
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1841d0bce31be448d7fbd808f569f8
+      internalID: 1536153509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_24
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 363
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eaccb820a5174459e9eb55f5f509e8
+      internalID: 244180435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_25
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 370
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453aaf9a2bbffeb459718490b39fc86c
+      internalID: -833272492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_26
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 357
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd35f7f9481a2194b8eefdd4ab59884e
+      internalID: -265331171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 352
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866e4eb38e2de444c894717380b3ba5a
+      internalID: -478881356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_28
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 263
+        width: 97
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2f0b523e2ce474e970db6073091221
+      internalID: 174860175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_29
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 362
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ccf37454fd90043a9a8a98c1a3f9e8
+      internalID: 1170254908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_30
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 344
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40c212b82851ca43872e16e1969a07e
+      internalID: -151712153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_31
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 345
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361a9831e394cd941b3177b1e70b9ec4
+      internalID: 1950415930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_32
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 331
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de763a97212982d40ad5bb9f12f54109
+      internalID: -648592558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_33
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 346
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13635656d5b8614db1cf77634ccafe5
+      internalID: -572790518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_34
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 350
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3caad0b477f02418236c0ca47b0905
+      internalID: 1994255730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_35
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 341
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b80d105233c9934e944f9abae81cbb2
+      internalID: 1471983722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_36
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 337
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371ee0de4a39cf342b569edfcb3a9ab9
+      internalID: -572753379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_37
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 334
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd1e8c379a57734cb1c5b119ccd1b7f
+      internalID: 1513199688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 337
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22f5919b951fe84188821d0cf1f19ef
+      internalID: -1658865740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_39
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 335
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fc0e8757b85aa4bab111a3e08db810
+      internalID: 341943618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_40
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 337
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb3d2c44e8cbbf41b34545447cce570
+      internalID: 1380805012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_41
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 335
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64511674312fede4288a4c8ef423c0ff
+      internalID: 235518320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_42
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 338
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be42a08431b1f3c4c88b5286857ad27a
+      internalID: 144262040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_43
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 335
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82574567dcb62c34d98bf12d04715bc2
+      internalID: 1105441580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_44
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 330
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8925ef5ee856e92478fc95d9b39ad429
+      internalID: 302128478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_45
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 331
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18b8a1077615b24e87b205a9035f4bb
+      internalID: 10457671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_46
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 331
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e19aa7f1f7caf4bbe1884f5e5b6778
+      internalID: 1387490550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_47
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 331
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680b6b82d78148e419cf4281eb3bfd62
+      internalID: 178697968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_48
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 331
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aeb2bc438837ca4c9dcf2f2fcc3f1a6
+      internalID: 1350153424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_49
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 318
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ec79099f2e59f46918e7c017583b0c
+      internalID: 514654676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_50
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 318
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e53b2bf981da11479f6f5941e06dc7a
+      internalID: -1060151135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_51
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 307
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e34a0fb26ec60a24fbbbe9cdd26a7ca5
+      internalID: -874499874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_52
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 302
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de98d9676d68c124c8ff11bfdfefa476
+      internalID: -1398547154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_53
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 313
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a6f481aec33db479384bb12908818b
+      internalID: 636957592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_54
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 289
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fc588a36acf77448b3784263f11f87
+      internalID: -1919241999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_55
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 312
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08204ac5a1916d41b720f45e8c30037
+      internalID: -1430372660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_56
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 303
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d566a0593c15b4bacbfb181c7c22f4
+      internalID: -1856481546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_57
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 302
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b587d112ba23bea439e7a1e308679440
+      internalID: 1934250315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_58
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 306
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07fbafe5a4934b44197e22d99ac71828
+      internalID: -2076858898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_59
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 302
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d4bdebfdac4bd42b8674b03489d1f0
+      internalID: -2015385343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_60
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 306
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff1f720fc77ef247b262c738352dc24
+      internalID: -1931695135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_61
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 301
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eebb1bd8917fc04eb44b4e949496a15
+      internalID: 476478871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_62
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 300
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85fddc701513eb498f5841a8bced90d
+      internalID: -354991101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_63
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 296
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfacd4a8d176d72448cac21833f53f82
+      internalID: -1687771901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_64
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 298
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8915b9afb31aa4ebeff7b8bcb14834
+      internalID: -804376199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_65
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 297
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7769c0936d2ce34d8d9e2c59aa6c55f
+      internalID: -1972785136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_66
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 287
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3b6bab73fb3fb408bf7c172f09e19e
+      internalID: -1677120433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_67
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 291
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ecd0b7814e3864e879213ad9dee2ce
+      internalID: 1259108752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_68
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 287
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e68ca16167020949a06c56f6506e311
+      internalID: 1556124391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_69
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 290
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d21159afa43ee643930f069ed0c91b0
+      internalID: 142702511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_70
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 280
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c04ff02d3fe7842b4d7cab8d1749ee
+      internalID: 1544404855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_71
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 285
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dbd16e9f50836e4899c76ef51ed8f36
+      internalID: 354841930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_72
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 279
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a7df5c984116840a4bbcba45533441
+      internalID: -35851322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_73
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 281
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d20f42f5f7625845923491a4d7d1454
+      internalID: 1465850549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_74
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 284
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3148ec62377bc9469d43417c5334317
+      internalID: -474856701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_75
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 278
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e0ce88f9b3bd94bba54ddb0b558554
+      internalID: -2004263527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_76
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 280
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b182be71e18ffc6469ba90087771b2f9
+      internalID: 115324392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_77
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 276
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 147f24d9488a20b4a96990af60676eff
+      internalID: 55482213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_78
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 268
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9408d9f340e1c4b889d87c2b7d4c7c
+      internalID: -1122480725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_79
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 274
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe597e4f7e427546877a01429e286a2
+      internalID: 1272210589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_80
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 273
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f52dd8652163847b442d17fa3c1969
+      internalID: -1999996312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_81
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 272
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837914fe052e2ca45a8f4ea787d4d989
+      internalID: 1291872529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_82
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 271
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46477f0f371aed945bcd98dc143f5047
+      internalID: 707889655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_83
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 268
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58bc3edda89390c43a8a45d0d4977d43
+      internalID: 1515908145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_84
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 267
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffc462975b9db243a6dc71e3971268a
+      internalID: -1480273481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_85
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 265
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795e6abd5e7f72445b1571eb4f47447f
+      internalID: -1134119789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_86
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 264
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51be5f75934101040a60171948599c5f
+      internalID: 1434602124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_87
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 233
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56394acc88b4b7b4d9fcc39a0dd08902
+      internalID: 1100655032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_88
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 234
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30ff66d14bcc044bb9774142e0a444d
+      internalID: 232183963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_89
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 234
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbeb363483208747bc7c7dab414fa27
+      internalID: -1786742750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_90
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 235
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cca3916a892ea4dab4f78ebf76104e
+      internalID: 530178852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_91
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 235
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36bde7bf3603bea4c81732a593bf55c3
+      internalID: -1580759551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_92
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 229
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fec5668867267e4448d9dc7ab171ab21
+      internalID: 1788563018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_93
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 130
+        width: 112
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134de594744a985448c94e6cd3554d03
+      internalID: -1585389245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_94
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 93
+        width: 89
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d383905ac41c8419e0026cf3653db0
+      internalID: -240626499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_95
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 227
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469264f90e6d72d49a110d13c4b0336d
+      internalID: 1903929765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_96
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 132
+        width: 68
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d47940f9876164496064fc23ed5186
+      internalID: -2071949710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_97
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 231
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5427b554b1463448ace3c0f6951b599
+      internalID: -1450280677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_98
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 228
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ceca2bbcda6f949b9fc29017caf154
+      internalID: 1277019534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_99
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 228
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a948538011aa5bd4aafe9022b4af75aa
+      internalID: 400169122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_100
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 216
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fcc99a7b7df5840a4c54908bdd182a
+      internalID: 1931568403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_101
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5c2fbdb2581b34a9eaeab2fea91575
+      internalID: 1887866943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_102
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 216
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dadf10aeb68a070488e5a64aa1f403ed
+      internalID: 59145104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_103
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 218
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c297a7f9c044e3488680435677ff875
+      internalID: 379550167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_104
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 216
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a85241ea42eef74ca8457c89f483297
+      internalID: 2052518712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_105
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 170
+        width: 64
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a524d3129d73d5642bf2d9d1ebef43a5
+      internalID: -1619887129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_106
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 170
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fb7ed84dabcdf4192f8ef9f6891050
+      internalID: -379650495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_107
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 218
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cdb74007599df54f9f7faa30aab5e53
+      internalID: -198791421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_108
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 205
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade06ac23b611ab42b02d0919d1a8c50
+      internalID: -58645814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_109
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 207
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465c0a9b21c14a84da9c2edca068f850
+      internalID: -728193523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_110
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 208
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6d4bd189cdb9d4cb5b37dde1a53302
+      internalID: -1692167758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_111
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 208
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97435457c2d1fe4b98ce2598838033e
+      internalID: -123555055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_112
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 199
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa7466cd027ead40a35b72a0feadeed
+      internalID: -1156048255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_113
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 201
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458d9eb91da7b1444a7a0dc97a43962a
+      internalID: 1795320854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_114
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 182
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb3e8c93ac031e47ba2fe961d20d351
+      internalID: 897003331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_115
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 170
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eebb713b604e7c4db2dbedb7c7e2bcb
+      internalID: 475557323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_116
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 159
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d88854b8519dd74c8fbe5c3f463c0de
+      internalID: -946784741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_117
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 159
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256580a618cf175488abda6a8a2cfd69
+      internalID: 542956627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_118
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 146
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e460135e4fc7143b33a9ef106ff725
+      internalID: -458669292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_119
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 148
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e009a2b90c6645498876b77d954fdd3
+      internalID: 1039450620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_120
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 150
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f866a285434774185d4d0280c3971b
+      internalID: -2005139747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_121
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 150
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6069b3aed97998440a6674e305f520b0
+      internalID: -1104062341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_122
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 148
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55acdd123a4ba424bae7d344396aea7b
+      internalID: 360197118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_123
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 141
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731cfa88e2e907549826c1a3f6a7a835
+      internalID: -1979254169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_124
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 140
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c647fa11ab0d34fb4dff97306789c0
+      internalID: -1861518139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_125
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 140
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d408481a6686e954cbf69562afca0ddb
+      internalID: -491085687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_126
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 139
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcc94ac257c8bed47bef4b509f04f31d
+      internalID: 2039712230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_127
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d757eb0db9751409b9bd4513f3ff26
+      internalID: -1113068168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_128
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 8
+        width: 64
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fec2a3b7309a943a3a0685e8d5990c
+      internalID: 1527207814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_129
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 8
+        width: 81
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdca0e062f2ccd44da6490d30b5364aa
+      internalID: 1454738224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngarea.com_explosion-gif-png-6473743_130
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 9
+        width: 60
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501f94514acf58141805839c5ee7fecd
+      internalID: -1178764475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pngarea.com_explosion-gif-png-6473743_0: -430409866
+      pngarea.com_explosion-gif-png-6473743_1: -797880817
+      pngarea.com_explosion-gif-png-6473743_10: -2144764033
+      pngarea.com_explosion-gif-png-6473743_100: 1931568403
+      pngarea.com_explosion-gif-png-6473743_101: 1887866943
+      pngarea.com_explosion-gif-png-6473743_102: 59145104
+      pngarea.com_explosion-gif-png-6473743_103: 379550167
+      pngarea.com_explosion-gif-png-6473743_104: 2052518712
+      pngarea.com_explosion-gif-png-6473743_105: -1619887129
+      pngarea.com_explosion-gif-png-6473743_106: -379650495
+      pngarea.com_explosion-gif-png-6473743_107: -198791421
+      pngarea.com_explosion-gif-png-6473743_108: -58645814
+      pngarea.com_explosion-gif-png-6473743_109: -728193523
+      pngarea.com_explosion-gif-png-6473743_11: -1351250030
+      pngarea.com_explosion-gif-png-6473743_110: -1692167758
+      pngarea.com_explosion-gif-png-6473743_111: -123555055
+      pngarea.com_explosion-gif-png-6473743_112: -1156048255
+      pngarea.com_explosion-gif-png-6473743_113: 1795320854
+      pngarea.com_explosion-gif-png-6473743_114: 897003331
+      pngarea.com_explosion-gif-png-6473743_115: 475557323
+      pngarea.com_explosion-gif-png-6473743_116: -946784741
+      pngarea.com_explosion-gif-png-6473743_117: 542956627
+      pngarea.com_explosion-gif-png-6473743_118: -458669292
+      pngarea.com_explosion-gif-png-6473743_119: 1039450620
+      pngarea.com_explosion-gif-png-6473743_12: -1604387510
+      pngarea.com_explosion-gif-png-6473743_120: -2005139747
+      pngarea.com_explosion-gif-png-6473743_121: -1104062341
+      pngarea.com_explosion-gif-png-6473743_122: 360197118
+      pngarea.com_explosion-gif-png-6473743_123: -1979254169
+      pngarea.com_explosion-gif-png-6473743_124: -1861518139
+      pngarea.com_explosion-gif-png-6473743_125: -491085687
+      pngarea.com_explosion-gif-png-6473743_126: 2039712230
+      pngarea.com_explosion-gif-png-6473743_127: -1113068168
+      pngarea.com_explosion-gif-png-6473743_128: 1527207814
+      pngarea.com_explosion-gif-png-6473743_129: 1454738224
+      pngarea.com_explosion-gif-png-6473743_13: -1511078803
+      pngarea.com_explosion-gif-png-6473743_130: -1178764475
+      pngarea.com_explosion-gif-png-6473743_14: -862044404
+      pngarea.com_explosion-gif-png-6473743_15: -672224264
+      pngarea.com_explosion-gif-png-6473743_16: -1278568406
+      pngarea.com_explosion-gif-png-6473743_17: 1255397389
+      pngarea.com_explosion-gif-png-6473743_18: -342431261
+      pngarea.com_explosion-gif-png-6473743_19: 461635337
+      pngarea.com_explosion-gif-png-6473743_2: 748558468
+      pngarea.com_explosion-gif-png-6473743_20: -160203392
+      pngarea.com_explosion-gif-png-6473743_21: 634077017
+      pngarea.com_explosion-gif-png-6473743_22: 858852003
+      pngarea.com_explosion-gif-png-6473743_23: 1536153509
+      pngarea.com_explosion-gif-png-6473743_24: 244180435
+      pngarea.com_explosion-gif-png-6473743_25: -833272492
+      pngarea.com_explosion-gif-png-6473743_26: -265331171
+      pngarea.com_explosion-gif-png-6473743_27: -478881356
+      pngarea.com_explosion-gif-png-6473743_28: 174860175
+      pngarea.com_explosion-gif-png-6473743_29: 1170254908
+      pngarea.com_explosion-gif-png-6473743_3: 1143341503
+      pngarea.com_explosion-gif-png-6473743_30: -151712153
+      pngarea.com_explosion-gif-png-6473743_31: 1950415930
+      pngarea.com_explosion-gif-png-6473743_32: -648592558
+      pngarea.com_explosion-gif-png-6473743_33: -572790518
+      pngarea.com_explosion-gif-png-6473743_34: 1994255730
+      pngarea.com_explosion-gif-png-6473743_35: 1471983722
+      pngarea.com_explosion-gif-png-6473743_36: -572753379
+      pngarea.com_explosion-gif-png-6473743_37: 1513199688
+      pngarea.com_explosion-gif-png-6473743_38: -1658865740
+      pngarea.com_explosion-gif-png-6473743_39: 341943618
+      pngarea.com_explosion-gif-png-6473743_4: 1518800357
+      pngarea.com_explosion-gif-png-6473743_40: 1380805012
+      pngarea.com_explosion-gif-png-6473743_41: 235518320
+      pngarea.com_explosion-gif-png-6473743_42: 144262040
+      pngarea.com_explosion-gif-png-6473743_43: 1105441580
+      pngarea.com_explosion-gif-png-6473743_44: 302128478
+      pngarea.com_explosion-gif-png-6473743_45: 10457671
+      pngarea.com_explosion-gif-png-6473743_46: 1387490550
+      pngarea.com_explosion-gif-png-6473743_47: 178697968
+      pngarea.com_explosion-gif-png-6473743_48: 1350153424
+      pngarea.com_explosion-gif-png-6473743_49: 514654676
+      pngarea.com_explosion-gif-png-6473743_5: 1245881613
+      pngarea.com_explosion-gif-png-6473743_50: -1060151135
+      pngarea.com_explosion-gif-png-6473743_51: -874499874
+      pngarea.com_explosion-gif-png-6473743_52: -1398547154
+      pngarea.com_explosion-gif-png-6473743_53: 636957592
+      pngarea.com_explosion-gif-png-6473743_54: -1919241999
+      pngarea.com_explosion-gif-png-6473743_55: -1430372660
+      pngarea.com_explosion-gif-png-6473743_56: -1856481546
+      pngarea.com_explosion-gif-png-6473743_57: 1934250315
+      pngarea.com_explosion-gif-png-6473743_58: -2076858898
+      pngarea.com_explosion-gif-png-6473743_59: -2015385343
+      pngarea.com_explosion-gif-png-6473743_6: 1624183220
+      pngarea.com_explosion-gif-png-6473743_60: -1931695135
+      pngarea.com_explosion-gif-png-6473743_61: 476478871
+      pngarea.com_explosion-gif-png-6473743_62: -354991101
+      pngarea.com_explosion-gif-png-6473743_63: -1687771901
+      pngarea.com_explosion-gif-png-6473743_64: -804376199
+      pngarea.com_explosion-gif-png-6473743_65: -1972785136
+      pngarea.com_explosion-gif-png-6473743_66: -1677120433
+      pngarea.com_explosion-gif-png-6473743_67: 1259108752
+      pngarea.com_explosion-gif-png-6473743_68: 1556124391
+      pngarea.com_explosion-gif-png-6473743_69: 142702511
+      pngarea.com_explosion-gif-png-6473743_7: -2013556597
+      pngarea.com_explosion-gif-png-6473743_70: 1544404855
+      pngarea.com_explosion-gif-png-6473743_71: 354841930
+      pngarea.com_explosion-gif-png-6473743_72: -35851322
+      pngarea.com_explosion-gif-png-6473743_73: 1465850549
+      pngarea.com_explosion-gif-png-6473743_74: -474856701
+      pngarea.com_explosion-gif-png-6473743_75: -2004263527
+      pngarea.com_explosion-gif-png-6473743_76: 115324392
+      pngarea.com_explosion-gif-png-6473743_77: 55482213
+      pngarea.com_explosion-gif-png-6473743_78: -1122480725
+      pngarea.com_explosion-gif-png-6473743_79: 1272210589
+      pngarea.com_explosion-gif-png-6473743_8: 1695668577
+      pngarea.com_explosion-gif-png-6473743_80: -1999996312
+      pngarea.com_explosion-gif-png-6473743_81: 1291872529
+      pngarea.com_explosion-gif-png-6473743_82: 707889655
+      pngarea.com_explosion-gif-png-6473743_83: 1515908145
+      pngarea.com_explosion-gif-png-6473743_84: -1480273481
+      pngarea.com_explosion-gif-png-6473743_85: -1134119789
+      pngarea.com_explosion-gif-png-6473743_86: 1434602124
+      pngarea.com_explosion-gif-png-6473743_87: 1100655032
+      pngarea.com_explosion-gif-png-6473743_88: 232183963
+      pngarea.com_explosion-gif-png-6473743_89: -1786742750
+      pngarea.com_explosion-gif-png-6473743_9: -1967081392
+      pngarea.com_explosion-gif-png-6473743_90: 530178852
+      pngarea.com_explosion-gif-png-6473743_91: -1580759551
+      pngarea.com_explosion-gif-png-6473743_92: 1788563018
+      pngarea.com_explosion-gif-png-6473743_93: -1585389245
+      pngarea.com_explosion-gif-png-6473743_94: -240626499
+      pngarea.com_explosion-gif-png-6473743_95: 1903929765
+      pngarea.com_explosion-gif-png-6473743_96: -2071949710
+      pngarea.com_explosion-gif-png-6473743_97: -1450280677
+      pngarea.com_explosion-gif-png-6473743_98: 1277019534
+      pngarea.com_explosion-gif-png-6473743_99: 400169122
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
