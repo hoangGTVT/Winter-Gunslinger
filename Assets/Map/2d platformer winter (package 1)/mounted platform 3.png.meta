@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,50 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mounted platform 3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 455
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 164.5, y: -56}
+        - {x: 183.5, y: -48}
+        - {x: 222.5, y: -53}
+        - {x: 227.5, y: -46}
+        - {x: 227.5, y: 58}
+        - {x: -227.5, y: 58}
+        - {x: -227.5, y: -46}
+        - {x: -213.5, y: -52}
+        - {x: -184.5, y: -50}
+        - {x: -153.5, y: -49}
+        - {x: -114.5, y: -54}
+        - {x: -96.5, y: -43}
+        - {x: -62.5, y: -55}
+        - {x: -40.5, y: -56}
+        - {x: -22.5, y: -52}
+        - {x: 10.5, y: -38}
+        - {x: 17.5, y: -44}
+        - {x: 48.5, y: -58}
+        - {x: 82.5, y: -58}
+        - {x: 107.5, y: -47}
+        - {x: 132.5, y: -58}
+        - {x: 150.5, y: -58}
+      tessellationDetail: 0.2
+      bones: []
+      spriteID: 2e6ef559b4d3345488cc36121d276038
+      internalID: 1296047008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +188,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mounted platform 3_0: 1296047008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

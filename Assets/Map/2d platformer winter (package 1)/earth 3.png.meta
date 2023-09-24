@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,51 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: earth 3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 296
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: -142, y: 188}
+        - {x: -143, y: 187}
+        - {x: -148, y: 181}
+        - {x: -148, y: 156}
+        - {x: -138, y: 142}
+        - {x: -127, y: 129}
+        - {x: -120, y: 90}
+        - {x: -124, y: 63}
+        - {x: -134, y: 30}
+        - {x: -134, y: 19}
+        - {x: -124, y: 2}
+        - {x: -122, y: -9}
+        - {x: -120, y: -33}
+        - {x: -124, y: -43}
+        - {x: -125, y: -56}
+        - {x: -132, y: -81}
+        - {x: -125, y: -103}
+        - {x: -128, y: -124}
+        - {x: -121, y: -156}
+        - {x: -126, y: -180}
+        - {x: -126, y: -188}
+        - {x: 148, y: -188}
+        - {x: 148, y: 188}
+      tessellationDetail: 0.24
+      bones: []
+      spriteID: 38852b1453dfc194aab826720beb2948
+      internalID: 563125232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +189,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      earth 3_0: 563125232
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

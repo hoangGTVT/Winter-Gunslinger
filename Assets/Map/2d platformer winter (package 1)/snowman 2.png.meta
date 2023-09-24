@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,7 +134,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: snowman 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 114
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 48, y: -67}
+        - {x: 45, y: -67}
+        - {x: 48, y: -61}
+        - {x: 48, y: -34}
+        - {x: 47, y: -28}
+        - {x: 42, y: -20}
+        - {x: 26, y: -8}
+        - {x: 23, y: -8}
+        - {x: 27, y: -1}
+        - {x: 28, y: 4}
+        - {x: 30, y: 4}
+        - {x: 36, y: 2}
+        - {x: 39, y: 2}
+        - {x: 44, y: 6}
+        - {x: 52, y: 20}
+        - {x: 57, y: 20}
+        - {x: 57, y: 26}
+        - {x: 56, y: 29}
+        - {x: 53, y: 29}
+        - {x: 48, y: 31}
+        - {x: 46, y: 31}
+        - {x: 45, y: 28}
+        - {x: 46, y: 24}
+        - {x: 46, y: 22}
+        - {x: 42, y: 16}
+        - {x: 37, y: 8}
+        - {x: 30, y: 9}
+        - {x: 22, y: 23}
+        - {x: 21, y: 38}
+        - {x: 19, y: 44}
+        - {x: 15, y: 50}
+        - {x: 20, y: 55}
+        - {x: 22, y: 59}
+        - {x: 35, y: 72}
+        - {x: 33, y: 77}
+        - {x: 23, y: 73}
+        - {x: 15, y: 68}
+        - {x: 3, y: 61}
+        - {x: -3, y: 63}
+        - {x: -13, y: 63}
+        - {x: -20, y: 61}
+        - {x: -21, y: 65}
+        - {x: -25, y: 70}
+        - {x: -33, y: 85}
+        - {x: -38, y: 85}
+        - {x: -38, y: 72}
+        - {x: -37, y: 64}
+        - {x: -36, y: 60}
+        - {x: -35, y: 55}
+        - {x: -38, y: 45}
+        - {x: -39, y: 33}
+        - {x: -38, y: 29}
+        - {x: -33, y: 21}
+        - {x: -39, y: 15}
+        - {x: -40, y: 13}
+        - {x: -53, y: 20}
+        - {x: -52, y: 25}
+        - {x: -51, y: 32}
+        - {x: -49, y: 39}
+        - {x: -46, y: 42}
+        - {x: -46, y: 43}
+        - {x: -49, y: 49}
+        - {x: -51, y: 49}
+        - {x: -56, y: 48}
+        - {x: -57, y: 47}
+        - {x: -57, y: 41}
+        - {x: -56, y: 39}
+        - {x: -57, y: 30}
+        - {x: -57, y: 16}
+        - {x: -54, y: 14}
+        - {x: -47, y: 10}
+        - {x: -42, y: 7}
+        - {x: -42, y: 2}
+        - {x: -40, y: -7}
+        - {x: -37, y: -12}
+        - {x: -41, y: -13}
+        - {x: -47, y: -18}
+        - {x: -50, y: -22}
+        - {x: -53, y: -27}
+        - {x: -54, y: -32}
+        - {x: -55, y: -40}
+        - {x: -55, y: -58}
+        - {x: -52, y: -68}
+        - {x: -57, y: -73}
+        - {x: -57, y: -85}
+        - {x: 57, y: -85}
+        - {x: 57, y: -75}
+        - {x: 53, y: -69}
+      tessellationDetail: 0.56
+      bones: []
+      spriteID: 2484a25b87c42ad468de875a3f1b3b4b
+      internalID: -1294182913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +254,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      snowman 2_0: -1294182913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

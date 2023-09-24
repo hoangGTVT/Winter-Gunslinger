@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,57 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: earth 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 298
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape:
+      - - {x: 120, y: -137}
+        - {x: 130, y: -119}
+        - {x: 128, y: -108}
+        - {x: 124, y: -98}
+        - {x: 123, y: -81}
+        - {x: 119, y: -75}
+        - {x: 124, y: -32}
+        - {x: 117, y: -20}
+        - {x: 118, y: 9}
+        - {x: 120, y: 24}
+        - {x: 118, y: 43}
+        - {x: 124, y: 60}
+        - {x: 117, y: 78}
+        - {x: 122, y: 105}
+        - {x: 122, y: 118}
+        - {x: 117, y: 129}
+        - {x: 122, y: 133}
+        - {x: 141, y: 136}
+        - {x: 146, y: 145}
+        - {x: 149, y: 153}
+        - {x: 149, y: 179}
+        - {x: 143, y: 187}
+        - {x: 140, y: 188}
+        - {x: -149, y: 188}
+        - {x: -149, y: -188}
+        - {x: 121, y: -188}
+        - {x: 121, y: -177}
+        - {x: 120, y: -160}
+        - {x: 118, y: -143}
+      tessellationDetail: 0.3
+      bones: []
+      spriteID: 24e4b147253d03e418a45bde9a71d90b
+      internalID: -1820148228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +195,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      earth 2_0: -1820148228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
