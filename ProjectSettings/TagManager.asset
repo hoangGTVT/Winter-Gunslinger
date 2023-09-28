@@ -7,6 +7,8 @@ TagManager:
   - Player01
   - Ground
   - Boss
+  - Player01Animation
+  - Dead
   layers:
   - Default
   - TransparentFX

@@ -6,10 +6,12 @@ using static PlayerAnimation;
 public class PlayerMoment : MonoBehaviour
 {
     PlayerControls controls;
-    public static float  dir = 0;
-    
-    public static float moveSpeed = 5f;
-    public static float JumForce = 10f;
+    protected static float  dir = 0;
+    public static float Dir { get { return dir; } }
+
+
+    protected static float moveSpeed = 5f;
+    protected static float JumForce = 10f;
     private int numberOfJump = 0;
     [SerializeField] private LayerMask jumpableGround;
     private void Awake()
@@ -32,9 +34,13 @@ public class PlayerMoment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerAnimation.rb.velocity = new Vector2(PlayerMoment.dir * PlayerMoment.moveSpeed, PlayerAnimation.rb.velocity.y);
+       
         
         
+    }
+    private void FixedUpdate()
+    {
+         PlayerAnimation.rb.velocity = new Vector2(PlayerMoment.Dir * PlayerMoment.moveSpeed, PlayerAnimation.rb.velocity.y);
     }
     private bool IsGrounded()
     {
@@ -47,13 +53,15 @@ public class PlayerMoment : MonoBehaviour
             numberOfJump = 0;
             PlayerAnimation.rb.velocity = new Vector2(PlayerAnimation.rb.velocity.x, JumForce);
             numberOfJump++;
+            AudioManager.instance.Play("Jump");
         }
         else if (numberOfJump == 1)
         {
             PlayerAnimation.rb.velocity = new Vector2(PlayerAnimation.rb.velocity.x, JumForce);
             numberOfJump++;
+            AudioManager.instance.Play("Jump");
         }
     }
 
-
+    
 }

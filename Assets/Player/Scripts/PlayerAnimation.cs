@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour
+public class PlayerAnimation : FindObject
 {
+    public  static PlayerAnimation instance;
+    public Waepon waepon1;
+    public PlayerLife playerLife;
     public static Rigidbody2D rb;
     private Animator animator;
     public static SpriteRenderer sp;
     public static BoxCollider2D coll;
     PlayerControls controls;
-    bool shoot = false;
-   
+    [SerializeField]  bool h_shoot = false;
+    [SerializeField] public float h_ShootingDelay = 0;
     public bool h_IsRight = true;
-    private  enum MovementState { idle, shoot, attack,run,hit,fall}
+    private  enum MovementState { idle, fly, jump,shoot,throws,run,attack}
 
    
     private void Awake()
@@ -22,7 +25,11 @@ public class PlayerAnimation : MonoBehaviour
 
         controls.Land.Shoot.performed += ctx => 
         {
-            shoot = true;  
+            if (h_ShootingDelay <= 0)
+            {
+                h_shoot = true;
+            }
+             
 
         };
         
@@ -43,14 +50,27 @@ public class PlayerAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ShootingDelay();
+
+
+    }
+    protected void ShootingDelay()
+    {
+        if (h_ShootingDelay>0)
+        {
+            h_ShootingDelay -= Time.deltaTime;
+        }
+    }
+    public void FixedUpdate()
+    {
         UpdateAnimation();
         IsRotate();
-            
+       
     }
     private void UpdateAnimation()
     {
         MovementState state;
-        if (PlayerMoment.dir == 0f )
+        if (PlayerMoment.Dir == 0f )
         {
        
             state = MovementState.idle;
@@ -64,19 +84,22 @@ public class PlayerAnimation : MonoBehaviour
         if (rb.velocity.y > .1f)
         {
 
-            state = MovementState.hit;
+            state = MovementState.jump;
+           
             
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.fall;
+            state = MovementState.jump;
         }
 
-        if (shoot == true)
+        if (h_shoot == true && h_ShootingDelay<=0)
         {
             state = MovementState.shoot;
             Shooting();
+            h_ShootingDelay = 0.5f;
         }
+        
 
        
         animator.SetInteger("State", (int)state);
@@ -85,10 +108,10 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void IsRotate()
     {
-        if(PlayerMoment.dir>0 && !h_IsRight)
+        if(PlayerMoment.Dir>0 && !h_IsRight)
         {
             Filp();
-        }else if(PlayerMoment.dir<0 && h_IsRight)
+        }else if(PlayerMoment.Dir<0 && h_IsRight)
         {
             Filp();
         }
@@ -100,9 +123,20 @@ public class PlayerAnimation : MonoBehaviour
     }
     public void Shooting()
     {
-        Waepon waepon=GetComponent<Waepon>();
-        shoot = false;
-        waepon.Shoot();
+        
+         h_shoot = false;
+       
+        
+         waepon1.Shoot();
+        
+       
     }
 
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Dead"))
+        {
+            playerLife.PlayerDead();
+        }
+    }
 }

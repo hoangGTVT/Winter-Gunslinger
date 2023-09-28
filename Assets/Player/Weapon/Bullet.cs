@@ -9,11 +9,13 @@ public class Bullet : MonoBehaviour
     public GameObject h_Blast;
     void Start()
     {
+        
         rb.velocity=transform.right*speed;
     }
     private void Update()
     {
         Destroy(gameObject, 1);
+      
     }
 
     // Update is called once per frame
