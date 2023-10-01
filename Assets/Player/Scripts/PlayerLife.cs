@@ -35,7 +35,7 @@ public class PlayerLife : FindObject
     private void Awake()
     {
 
-
+        
         FindUiBar();
         GetStartValue();
         

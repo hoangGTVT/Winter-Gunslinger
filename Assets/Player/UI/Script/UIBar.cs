@@ -23,7 +23,7 @@ public class UIBar : FindObject
         if (gameObject != null)
         {
             h_UiPlayer.SetActive(true);
-        }else { return; }
+        }else { h_UiPlayer.SetActive(false); }
     }
     public void SetMaxHealth(int maxhealth)
     {
