@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - Player01Animation
   - Dead
+  - UIPlayer
   layers:
   - Default
   - TransparentFX

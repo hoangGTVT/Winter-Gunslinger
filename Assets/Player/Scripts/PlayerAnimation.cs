@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerAnimation : FindObject
 {
-    public  static PlayerAnimation instance;
+    
     public Waepon waepon1;
     public PlayerLife playerLife;
+    public PlayerMoment playerMoment;
     public static Rigidbody2D rb;
     private Animator animator;
     public static SpriteRenderer sp;
@@ -14,6 +15,7 @@ public class PlayerAnimation : FindObject
     PlayerControls controls;
     [SerializeField]  bool h_shoot = false;
     [SerializeField] public float h_ShootingDelay = 0;
+    
     public bool h_IsRight = true;
     private  enum MovementState { idle, fly, jump,shoot,throws,run,attack}
 
@@ -70,28 +72,42 @@ public class PlayerAnimation : FindObject
     private void UpdateAnimation()
     {
         MovementState state;
-        if (PlayerMoment.Dir == 0f )
+
+        if (playerMoment.h_IsFly == false)
         {
-       
-            state = MovementState.idle;
+            if (PlayerMoment.Dir == 0)
+            {
+
+                state = MovementState.idle;
+            }
+            else
+            {
+
+                state = MovementState.run;
+
+
+            }
+
+            if (rb.velocity.y > .1f)
+            {
+
+                state = MovementState.jump;
+
+
+            }
+            else if (rb.velocity.y < -.1f)
+            {
+                state = MovementState.jump;
+            }
         }
         else
         {
-           
-                 state = MovementState.run;
+            state = MovementState.fly;
         }
-
-        if (rb.velocity.y > .1f)
-        {
-
-            state = MovementState.jump;
-           
             
-        }
-        else if (rb.velocity.y < -.1f)
-        {
-            state = MovementState.jump;
-        }
+
+        
+        
 
         if (h_shoot == true && h_ShootingDelay<=0)
         {
@@ -106,6 +122,8 @@ public class PlayerAnimation : FindObject
 
 
     }
+
+    
     private void IsRotate()
     {
         if(PlayerMoment.Dir>0 && !h_IsRight)
@@ -138,5 +156,6 @@ public class PlayerAnimation : FindObject
         {
             playerLife.PlayerDead();
         }
+
     }
 }

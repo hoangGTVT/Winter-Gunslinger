@@ -55,13 +55,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Shoot1"",
-                    ""type"": ""Button"",
+                    ""name"": ""Fly"",
+                    ""type"": ""Value"",
                     ""id"": ""0df5cf76-0d5b-4eca-a7f0-31e473991c28"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -88,7 +88,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
+                    ""name"": ""Negative"",
                     ""id"": ""ee9c4355-50ed-4374-9b91-4053df7e77e2"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
@@ -99,7 +99,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""positive"",
+                    ""name"": ""Positive"",
                     ""id"": ""e23aa7cd-e068-4153-a69d-95327605421f"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
@@ -110,9 +110,42 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""10c62834-902b-4e10-81b1-7534e0bd5a2b"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""1c442af9-e6a4-466d-bfdf-f85380d6b0bc"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""57748a83-c347-4588-99b7-75a63c9c6e1b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""3bb3a292-fdaa-48db-a592-b162fc73771d"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -134,11 +167,11 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5482b00a-caa1-4acb-9bf7-359585ec0746"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Shoot1"",
+                    ""action"": ""Fly"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -152,7 +185,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Land_Move = m_Land.FindAction("Move", throwIfNotFound: true);
         m_Land_Jump = m_Land.FindAction("Jump", throwIfNotFound: true);
         m_Land_Shoot = m_Land.FindAction("Shoot", throwIfNotFound: true);
-        m_Land_Shoot1 = m_Land.FindAction("Shoot1", throwIfNotFound: true);
+        m_Land_Fly = m_Land.FindAction("Fly", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -217,7 +250,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Land_Move;
     private readonly InputAction m_Land_Jump;
     private readonly InputAction m_Land_Shoot;
-    private readonly InputAction m_Land_Shoot1;
+    private readonly InputAction m_Land_Fly;
     public struct LandActions
     {
         private @PlayerControls m_Wrapper;
@@ -225,7 +258,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Land_Move;
         public InputAction @Jump => m_Wrapper.m_Land_Jump;
         public InputAction @Shoot => m_Wrapper.m_Land_Shoot;
-        public InputAction @Shoot1 => m_Wrapper.m_Land_Shoot1;
+        public InputAction @Fly => m_Wrapper.m_Land_Fly;
         public InputActionMap Get() { return m_Wrapper.m_Land; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -244,9 +277,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
-            @Shoot1.started += instance.OnShoot1;
-            @Shoot1.performed += instance.OnShoot1;
-            @Shoot1.canceled += instance.OnShoot1;
+            @Fly.started += instance.OnFly;
+            @Fly.performed += instance.OnFly;
+            @Fly.canceled += instance.OnFly;
         }
 
         private void UnregisterCallbacks(ILandActions instance)
@@ -260,9 +293,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
-            @Shoot1.started -= instance.OnShoot1;
-            @Shoot1.performed -= instance.OnShoot1;
-            @Shoot1.canceled -= instance.OnShoot1;
+            @Fly.started -= instance.OnFly;
+            @Fly.performed -= instance.OnFly;
+            @Fly.canceled -= instance.OnFly;
         }
 
         public void RemoveCallbacks(ILandActions instance)
@@ -285,6 +318,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
-        void OnShoot1(InputAction.CallbackContext context);
+        void OnFly(InputAction.CallbackContext context);
     }
 }
