@@ -1,41 +1,62 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerLife : FindObject
 {
     
     public UIBar bar;
-   
-    [SerializeField] public static bool h_Isdead=false;
+
+    [SerializeField] protected int h_HPPoint;
+    [SerializeField] protected int h_MPPoint;
 
     // HP
-    [SerializeField] protected int h_MaxHp=100;
-    [SerializeField] protected int h_CurrentHp;
+    [SerializeField] protected float h_MaxHp;
+    [SerializeField] protected float h_CurrentHp;
+    [SerializeField] protected float h_BonusHP;
+    [SerializeField] protected float h_TotalHP;
+    [SerializeField] protected bool h_IsDead=false;
+    [SerializeField] protected bool h_IsDizzy=false;
+    [SerializeField] protected float h_GoldHP;
+    [SerializeField] protected int h_LvHP;
 
-   // ATK
-    [SerializeField] protected int h_CurrentATK;
+    // ATK
+    [SerializeField] protected float h_MaxATK;
+    
+    [SerializeField] protected float h_BonusATK;
+    [SerializeField] protected float h_TotalATK;
+    [SerializeField] protected float h_GoldATK;
+    [SerializeField] protected int h_LvATK;
 
     // Energy
-    [SerializeField] protected int h_MaxEnergyFly ;
-    [SerializeField] protected int h_CurrentEnergyFly;
+    [SerializeField] protected float h_MaxEnergyFly ;
+    [SerializeField] protected float h_GoldE;
+    [SerializeField] protected float h_TotalE;
+    [SerializeField] protected float h_CurrentEnergyFly;
+    [SerializeField] protected float h_BonusEnegry;
+    [SerializeField] protected int h_LvE;
 
     // DEF
-    [SerializeField] protected int h_CurrentDEF;
+    [SerializeField] protected float h_MaxDEF;
+    [SerializeField] protected float h_BonusDEF;
+    [SerializeField] protected float h_TotalDEF;
+    [SerializeField] protected float h_GoldDEF;
+    [SerializeField] protected int h_LvDEF;
 
     // EXP
-    [SerializeField] protected int h_MaxExp=100;
-    [SerializeField] protected int h_CurrentExp;
-    [SerializeField] protected int h_CurrentLevel=1;
+    [SerializeField] protected float h_MaxExp=100;
+    [SerializeField] protected float h_CurrentExp;
+    [SerializeField] protected float h_CurrentLevel=1;
     [SerializeField] protected bool h_IsLevelUp=false;
     [SerializeField] protected float h_EnergyCooldown = 5f;
     [SerializeField] bool h_canEnergy = true;
 
     //Gold
-    [SerializeField] protected int h_Gold;
+    [SerializeField] protected float h_Gold;
     private void Awake()
     {
 
-        
+        //PlayerPrefs.DeleteAll();
         FindUiBar();
         GetStartValue();
         
@@ -43,8 +64,8 @@ public class PlayerLife : FindObject
     private void Start()
     {
         SetMaxValue();
-        StartCoroutine(EnegryOverTime());
-       
+
+        StartCoroutine(HealEnegryEveryFiveSecon());
         
     }
 
@@ -60,30 +81,36 @@ public class PlayerLife : FindObject
     private void Update()
     {
         FindUiBar();
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.M))
         {
-            TakeGold(20);
-          
-           
+
+
+            TakeGold(50);
             
 
         }
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.N))
         {
-           
-            PlayerTakeExp(20);
+
+            PlusMPPoint();
             
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
 
-            PlusMaxHP(50);
+           PlayerTakeDamage(50);
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
 
-            PlayerTakeDamage(50);
+            PlusHPPoint();
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+
+            PlayerTakeExp(50);
         }
 
         SetValue();
@@ -101,84 +128,235 @@ public class PlayerLife : FindObject
     protected void GetStartValue()
     {
         // Set HP
-        if (PlayerPrefs.GetInt("MaxHPPlayer") < 200)
+
+        if (PlayerPrefs.GetInt("HPPoint") == 0) {
+            h_HPPoint = 0;
+        }
+        else
+        {
+            h_HPPoint = PlayerPrefs.GetInt("HPPoint");
+        }
+        if (PlayerPrefs.GetFloat("MaxHPPlayer") < 200)
         {
             h_MaxHp = 200;
-            h_CurrentHp = 200;
+            
         }
         else
         {
-            h_MaxHp = PlayerPrefs.GetInt("MaxHPPlayer");
-            h_CurrentHp = PlayerPrefs.GetInt("MaxHPPlayer");
+            h_MaxHp = PlayerPrefs.GetFloat("MaxHPPlayer");
+           
         }
+
+        if (PlayerPrefs.GetFloat("BonusHPPlayer") < 1)
+        {
+            h_BonusHP = 0;
+        }
+        else
+        {
+            h_BonusHP = PlayerPrefs.GetFloat("BonusHPPlayer");
+        }
+
+        if (PlayerPrefs.GetFloat("GoldHP") < 100)
+        {
+            h_GoldHP= 100;
+            PlayerPrefs.SetFloat("GoldHP", h_GoldHP);
+        }
+        else
+        {
+            h_GoldHP = PlayerPrefs.GetFloat("GoldHP");
+        }
+
+        if (PlayerPrefs.GetInt("LVHP") < 1)
+        {
+            h_LvHP = 1;
+            PlayerPrefs.SetInt("LVHP", h_LvHP);
+        }
+        else
+        {
+            h_LvHP = PlayerPrefs.GetInt("LVHP");
+        }
+
+        PlayerPrefs.SetFloat("TotalHP", h_MaxHp + h_BonusHP);
+        h_TotalHP= PlayerPrefs.GetFloat("TotalHP");
+        h_CurrentHp = h_TotalHP;
+
+
 
         // Set Energy
-        if (PlayerPrefs.GetInt("MaxEnergyPlayer") < 100)
+
+        if (PlayerPrefs.GetInt("MPPoint") == 0)
         {
-            h_MaxEnergyFly = 100;
-            h_CurrentEnergyFly = 100;
+            h_MPPoint = 0;
         }
         else
         {
-            h_MaxEnergyFly = PlayerPrefs.GetInt("MaxEnergyPlayer");
-            h_CurrentEnergyFly = PlayerPrefs.GetInt("MaxEnergyPlayer");
+            h_MPPoint = PlayerPrefs.GetInt("MPPoint");
         }
 
-        //Set Level
-        
-        if (PlayerPrefs.GetInt("LevelPlayer") < 1)
+        if (PlayerPrefs.GetFloat("MaxEnergyPlayer") < 100)
         {
-            h_CurrentLevel = 1;
-            PlayerPrefs.SetInt("LevelPlayer", h_CurrentLevel);
+            h_MaxEnergyFly = 100;
+            
         }
         else
         {
-            h_CurrentLevel = PlayerPrefs.GetInt("LevelPlayer");
+            h_MaxEnergyFly = PlayerPrefs.GetFloat("MaxEnergyPlayer");
+            
+        }
+
+        if (PlayerPrefs.GetFloat("BonusE") < 1)
+        {
+            h_BonusEnegry = 0;
+        }
+        else
+        {
+            h_BonusEnegry = PlayerPrefs.GetFloat("BonusE");
+        }
+        if (PlayerPrefs.GetFloat("GoldE") < 100)
+        {
+            h_GoldE = 100;
+            PlayerPrefs.SetFloat("GoldE", h_GoldE);
+        }
+        else
+        {
+            h_GoldE = PlayerPrefs.GetFloat("GoldE");
+        }
+        if (PlayerPrefs.GetInt("LVE") < 1)
+        {
+            h_LvE = 1;
+            PlayerPrefs.SetInt("LVE", h_LvE);
+        }
+        else
+        {
+            h_LvE = PlayerPrefs.GetInt("LVE");
+        }
+
+        PlayerPrefs.SetFloat("TotalE", h_MaxEnergyFly + h_BonusEnegry);
+        h_TotalE = PlayerPrefs.GetFloat("TotalE");
+        h_CurrentEnergyFly = h_TotalE;
+
+        //Set Level
+
+        if (PlayerPrefs.GetFloat("LevelPlayer") < 1)
+        {
+            h_CurrentLevel = 1;
+            PlayerPrefs.SetFloat("LevelPlayer", h_CurrentLevel);
+        }
+        else
+        {
+            h_CurrentLevel = PlayerPrefs.GetFloat("LevelPlayer");
         }
 
         //Set EXP
-        h_CurrentExp = PlayerPrefs.GetInt("CurrentEXP");
-        if (PlayerPrefs.GetInt("MaxEXP") < 100)
+        h_CurrentExp = PlayerPrefs.GetFloat("CurrentEXP");
+        if (PlayerPrefs.GetFloat("MaxEXP") < 100)
         {
             h_MaxExp = 100;
-            PlayerPrefs.SetInt("MaxEXP", h_MaxExp);
+            PlayerPrefs.SetFloat("MaxEXP", h_MaxExp);
         }
         else
         {
-            h_MaxExp = PlayerPrefs.GetInt("MaxEXP");
+            h_MaxExp = PlayerPrefs.GetFloat("MaxEXP");
         }
 
         //Set ATK
-        if (PlayerPrefs.GetInt("ATKPlayer") < 15)
+        if (PlayerPrefs.GetFloat("ATKPlayer") < 15)
         {
-            h_CurrentATK = 15;
-            PlayerPrefs.SetInt("ATKPlayer", h_CurrentATK);
+            h_MaxATK = 15;
+            PlayerPrefs.SetFloat("ATKPlayer", h_MaxATK);
         }
         else
         {
-            h_CurrentATK = PlayerPrefs.GetInt("ATKPlayer");
+            h_MaxATK = PlayerPrefs.GetFloat("ATKPlayer");
         }
 
-        //Set DEF
-        if (PlayerPrefs.GetInt("DEFPlayer") < 100)
+        if (PlayerPrefs.GetFloat("BonusATK") < 1)
         {
-            h_CurrentDEF = 100;
-            PlayerPrefs.SetInt("DEFPlayer", h_CurrentDEF);
+            h_BonusATK = 0;
         }
         else
         {
-            h_CurrentDEF = PlayerPrefs.GetInt("DEFPlayer");
+            h_BonusATK = PlayerPrefs.GetFloat("BonusATK");
+        }
+        PlayerPrefs.SetFloat("TotalATK", h_MaxATK + h_BonusATK);
+        h_TotalATK = PlayerPrefs.GetFloat("TotalATK");
+        
+        if (PlayerPrefs.GetFloat("GoldATK") < 100)
+        {
+            h_GoldATK = 100;
+            PlayerPrefs.SetFloat("GoldATK", h_GoldATK);
+        }
+        else
+        {
+            h_GoldATK = PlayerPrefs.GetFloat("GoldATK");
+        }
+        PlayerPrefs.SetFloat("TotalATK", h_MaxATK + h_BonusEnegry);
+        
+       
+
+        if (PlayerPrefs.GetInt("LVATK") < 1)
+        {
+            h_LvATK = 1;
+            PlayerPrefs.SetInt("LVATK", h_LvATK);
+        }
+        else
+        {
+            h_LvATK = PlayerPrefs.GetInt("LVATK");
+        }
+
+
+        //Set DEF
+        if (PlayerPrefs.GetFloat("DEFPlayer") < 100)
+        {
+            h_MaxDEF= 100;
+            PlayerPrefs.SetFloat("DEFPlayer", h_MaxDEF);
+        }
+        else
+        {
+            h_MaxDEF = PlayerPrefs.GetFloat("DEFPlayer");
+        }
+
+        if (PlayerPrefs.GetFloat("BonusDEF") < 1)
+        {
+            h_BonusDEF = 0;
+        }
+        else
+        {
+            h_BonusDEF = PlayerPrefs.GetFloat("BonusDEF");
+        }
+
+        PlayerPrefs.SetFloat("TotalDEF", h_MaxDEF + h_BonusDEF);
+        h_TotalDEF = PlayerPrefs.GetFloat("TotalDEF");
+        
+
+        if (PlayerPrefs.GetFloat("GoldDEF") < 100)
+        {
+            h_GoldDEF = 100;
+            PlayerPrefs.SetFloat("GoldDEF", h_GoldDEF);
+        }
+        else
+        {
+            h_GoldDEF = PlayerPrefs.GetFloat("GoldDEF");
+        }
+        if (PlayerPrefs.GetInt("LVDEF") < 1)
+        {
+            h_LvDEF = 1;
+            PlayerPrefs.SetInt("LVDEF", h_LvDEF);
+        }
+        else
+        {
+            h_LvDEF = PlayerPrefs.GetInt("LVDEF");
         }
 
         //Set Gold
 
-        if (PlayerPrefs.GetInt("Gold") == 0)
+        if (PlayerPrefs.GetFloat("Gold") == 0)
         {
             h_Gold = 0;
         }
         else
         {
-            h_Gold = PlayerPrefs.GetInt("Gold");
+            h_Gold = PlayerPrefs.GetFloat("Gold");
         }
 
     }
@@ -194,203 +372,490 @@ public class PlayerLife : FindObject
 
     protected void SetMaxValue()
     {
-        bar.SetMaxEnergy(h_MaxEnergyFly);
-        bar.SetMaxHealth(h_MaxHp);
+        bar.SetMaxEnergy(h_TotalE);
+        bar.SetMaxHealth(h_TotalHP);
         bar.SetMaxEXP(h_MaxExp);
     }
 
     // Set/Get Energy
-    public int GetEnergy()
+    public float GetEnergy()
     {
         
         return h_CurrentEnergyFly;
     }
 
-    public void PlusMaxEnergy(int h)
+    public int GetMPPoint()
     {
-        h_MaxEnergyFly += h;
-        PlayerPrefs.SetInt("MaxEnergyPlayer", h_MaxEnergyFly);
-        SetMaxValue();
+        return h_MPPoint;
     }
 
-    public int GetMaxEnergy()
+    public void PlusMPPoint()
     {
-        if (PlayerPrefs.GetInt("MaxEnergyPlayer") < h_MaxEnergyFly)
+        h_MPPoint += 1;
+        PlayerPrefs.SetInt("MPPoint", h_MPPoint);
+    }
+
+    public void MinusMPPoint()
+    {
+        h_MPPoint -= 1;
+        PlayerPrefs.SetInt("MPPoint", h_MPPoint);
+    }
+
+    public void UpLvE()
+    {
+        
+        if (GetGold() >= h_GoldE&& h_LvE<50)
         {
-            PlayerPrefs.SetInt("MaxEnergyPlayer", h_MaxEnergyFly)  ;
+            h_LvE += 1;
+            PlayerPrefs.SetInt("LVE", h_LvE);
+            DecreaseGold(h_GoldE);
+            h_GoldE += (int)(h_GoldE / 5);
+
+            PlayerPrefs.SetFloat("GoldE", h_GoldE);
+            PlusBonusE();
         }
         else
         {
-            h_MaxEnergyFly = PlayerPrefs.GetInt("MaxEnergyPlayer");
+            return;
         }
-        return h_MaxEnergyFly;
+        
     }
-    public int GetEnergy1()
+
+    public float GetBonusE()
     {
-        h_CurrentEnergyFly -= 2;
+        return h_BonusEnegry;
+    }
+    public int GetLvE()
+    {
+        return h_LvE;
+    }
+
+    public void PlusBonusE()
+    {
+        h_BonusEnegry += 8;
+        PlayerPrefs.SetFloat("BonusE", h_BonusEnegry);
+    }
+    
+
+    public float GetGoldE()
+    {
+        return h_GoldE;
+    }
+
+    
+
+    public void PlusMaxEnergy(float h)
+    {
+        h_MaxEnergyFly += h;
+        PlayerPrefs.SetFloat("MaxEnergyPlayer", h_MaxEnergyFly);
+        SetMaxValue();
+    }
+
+    public float GetTotalE()
+    {
+
+        if (h_TotalE < (h_MaxEnergyFly + h_BonusEnegry))
+        {
+            h_TotalE = h_MaxEnergyFly + h_BonusEnegry;
+            PlayerPrefs.SetFloat("TotalE", h_TotalE);
+        }
+        else
+        {
+            h_TotalE = PlayerPrefs.GetFloat("TotalE");
+        }
+        SetMaxValue();
+        return h_TotalE;
+    }
+    public float GetEnergy1()
+    {
+        h_CurrentEnergyFly -= 5;
         if (h_CurrentEnergyFly <= 0)
         {
-            return 0;
+            h_CurrentEnergyFly = 0;
         }
         return h_CurrentEnergyFly ;
         
     }
 
-    private IEnumerator EnegryOverTime()
+    public void HealEnergy()
     {
-        while (true)
+        if (GetMPPoint() > 0)
         {
-            yield return new WaitForSeconds(h_EnergyCooldown);
-            if (h_CurrentEnergyFly < h_MaxEnergyFly)
-            {
-                h_CurrentEnergyFly += 10;
-                if (h_CurrentEnergyFly >h_MaxEnergyFly)
+            MinusMPPoint();
+            StartCoroutine(HealEnegryEvery());
+        }
+        else
+        {
+            return;
+        }
+       
+    }
+    private IEnumerator HealEnegryEvery()
+    {
+        float healEnegry = 0;
+        while (healEnegry<100)
+        {
+            healEnegry += 5;
+            yield return new WaitForSeconds(0.1f);
+            
+                h_CurrentEnergyFly += 5;
+                if (h_CurrentEnergyFly >h_TotalE)
                 {
-                    h_CurrentEnergyFly = h_MaxEnergyFly;  
+                    h_CurrentEnergyFly = h_TotalE;  
                 }
                
+            
+        }
+    }
+    private IEnumerator HealEnegryEveryFiveSecon()
+    {
+       
+        while (true)
+        {
+            
+            
+            if (h_CurrentEnergyFly < h_MaxEnergyFly)
+            {
+                h_CurrentEnergyFly += 5;
+                if (h_CurrentEnergyFly > h_MaxEnergyFly)
+                {
+                    h_CurrentEnergyFly = h_MaxEnergyFly;
+                }
             }
+
+            yield return new WaitForSeconds(5f);
+
         }
     }
 
 
     // Set/Get Health Player
-    public void PlusMaxHP(int h)
+    public int GetHPPoint()
     {
-        h_MaxHp += h;
-        SetMaxValue();
+        return h_HPPoint;
     }
 
-    public void Heal(int heal)
+    public void PlusHPPoint()
     {
-        h_CurrentHp += heal;
-        if (h_CurrentHp > h_MaxHp)
-        {
-            h_CurrentHp = h_MaxHp;  
-        }
+        h_HPPoint += 1;
+        PlayerPrefs.SetInt("HPPoint", h_HPPoint);
     }
-    public int GetCurrentHP()
+
+    public void MinusHPPoint()
     {
-        return h_CurrentHp;
+        h_HPPoint -= 1;
+        PlayerPrefs.SetInt("HPPoint", h_HPPoint);
     }
-    public int GetMaxHP()
+    public void UpLvHP()
     {
-        if (PlayerPrefs.GetInt("MaxHPPlayer") < h_MaxHp)
+        if (GetGold() >= h_GoldHP && h_LvHP < 50)
         {
-            PlayerPrefs.SetInt("MaxHPPlayer", h_MaxHp);
+            h_LvHP += 1;
+            PlayerPrefs.SetInt("LVHP", h_LvHP);
+            DecreaseGold(h_GoldHP);
+            h_GoldHP += (int)(h_GoldHP / 5);
+
+            PlayerPrefs.SetFloat("GoldHP", h_GoldHP);
+            PlusBonusHP(50);
         }
         else
         {
-            h_MaxHp = PlayerPrefs.GetInt("MaxHPPlayer");
+            return;
         }
+           
+    }
+    public void PlusMaxHP(float h)
+    {
+        h_MaxHp += h;
+        PlayerPrefs.SetFloat("MaxHPPlayer", h_MaxHp);
+       
+    }
+    public float GetGoldHP()
+    {
+        return h_GoldHP;
+    }
 
-        return h_MaxHp;
+    public int GetLvHP()
+    {
+        return h_LvHP;
+    }
+
+    public bool GetIsDead()
+    {
+        return h_IsDead;
+    }
+
+    public bool GetIsDizzy()
+    {
+        return h_IsDizzy;
+    }
+
+    public void ChangeDizzy()
+    {
+        
+        StartCoroutine(SetDizzy());
+    }
+
+    IEnumerator SetDizzy()
+    {
+        h_IsDizzy = true;
+        yield return new WaitForSeconds(0.2f); 
+        h_IsDizzy = false; 
+    }
+    public void HealHP()
+    {
+        if (GetHPPoint() > 0)
+        {
+            MinusHPPoint();
+            StartCoroutine(HealHPEveryTime());
+        }
+       
+  
+    }
+
+    private IEnumerator HealHPEveryTime()
+    {
+        float heal = 0;
+        while(heal<300)
+        {
+            heal += 3;
+           
+            h_CurrentHp += 3;
+            if (h_CurrentHp > h_TotalHP)
+            {
+                h_CurrentHp = h_TotalHP;
+
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    public float GetCurrentHP()
+    {
+        return h_CurrentHp;
+    }
+
+    public void PlusBonusHP(float hp)
+    {
+        h_BonusHP += hp;
+        PlayerPrefs.SetFloat("BonusHPPlayer", h_BonusHP);
+        
+    }
+    public float GetTotalHP()
+    {
+
+        if (h_TotalHP < (h_MaxHp+h_BonusHP)) 
+        {
+            h_TotalHP = h_MaxHp + h_BonusHP;
+            PlayerPrefs.SetFloat("TotalHP", h_TotalHP);
+        }
+        else
+        {
+            h_TotalHP = PlayerPrefs.GetFloat("TotalHP");
+        }
+        SetMaxValue();
+        return h_TotalHP;
     }
     public void PlayerDead()
     {
        GameObject gameObject= base.FindObjectWithTag("Player01");
-       Destroy(gameObject);
+        h_IsDead = true;
+        AudioManager.instance.Play("Dead");
+        
+       Destroy(gameObject,0.5f);
+       
     }
-   protected void PlayerTakeDamage(int damage)
+   protected void PlayerTakeDamage(float damage)
     {
-        h_CurrentHp-=damage;
-        if (h_CurrentHp < 0) { h_CurrentHp = 0; }
+       
+
+        h_CurrentHp -= (int)(damage-(GetTotalDEF()/20*2));
+        
         if (h_CurrentHp <= 0)
         {
+            h_CurrentHp = 0;
             PlayerDead();
         }
     }
 
 
     // Set/Get EXP Player
-    public int GetEXP()
+    public float GetEXP()
     {
         return h_CurrentExp;
     }
-    public int GetMaxEXP()
+    public float GetMaxEXP()
     {
         return h_MaxExp;
     }
     
-    protected void PlayerTakeExp(int exp)
+    
+    protected void PlayerTakeExp(float exp)
     {
         h_CurrentExp += exp;
-        PlayerPrefs.SetInt("CurrentEXP", h_CurrentExp);
+        PlayerPrefs.SetFloat("CurrentEXP", h_CurrentExp);
         if (h_CurrentExp >= h_MaxExp)
         {
             h_CurrentLevel += 1;
-            PlusATK(h_CurrentATK/10);
-            PlusDEF(h_CurrentDEF/10);
-            PlayerPrefs.SetInt("LevelPlayer", h_CurrentLevel);
+            PlusATK(5);
+            PlusDEF(10);
+            PlusMaxHP(25);
+            PlusMaxEnergy(5);
+            PlayerPrefs.SetFloat("LevelPlayer", h_CurrentLevel);
             h_CurrentExp -= h_MaxExp;
+            PlayerPrefs.SetFloat("CurrentEXP", h_CurrentExp);
             h_IsLevelUp = true;
             MaxExpUp();
         }
     }
 
+    
     protected void MaxExpUp()
     {
         if (h_IsLevelUp==true)
         {
-            h_MaxExp += h_MaxExp / 10;
-            PlayerPrefs.SetInt("MaxEXP", h_MaxExp);
+            h_MaxExp += (int)(h_MaxExp / 15);
+            PlayerPrefs.SetFloat("MaxEXP", h_MaxExp);
             SetMaxValue();
             h_IsLevelUp = false;
         }
     }
 
-    public int GetLevel()
+    public float GetLevel()
     {
         return h_CurrentLevel;
     }
 
 
     //Set/Get ATK Player
-
-    public int GetATK()
+    public void UpLvATK()
     {
-        return h_CurrentATK;
+        if (GetGold() >= h_GoldATK && h_LvATK < 50)
+        {
+            h_LvATK += 1;
+            PlayerPrefs.SetInt("LVATK", h_LvATK);
+            DecreaseGold(h_GoldATK);
+            h_GoldATK += (int)(h_GoldATK / 5);
+
+            PlayerPrefs.SetFloat("GoldATK", h_GoldATK);
+            BonusATK(10);
+        }
+        else
+        {
+            return;
+        }
+        
+    }
+    public int GetLvATK()
+    {
+        return h_LvATK;
+    }
+    public float GetTotalATK()
+    {
+        if (h_TotalATK < (h_MaxATK + h_BonusATK))
+        {
+            h_TotalATK=h_MaxATK +h_BonusATK;
+            PlayerPrefs.SetFloat("TotalATK", h_TotalATK);
+        }
+        
+        return h_TotalATK;
+    }
+
+    public float GetGoldATK()
+    {
+        return h_GoldATK;
+    }
+    public float GetBonusATK()
+    {
+        return h_BonusATK;
+    }
+    public void BonusATK(float atk)
+    {
+        h_BonusATK += atk;
+        PlayerPrefs.SetFloat("BonusATK", h_BonusATK);
     }
     
-    public void PlusATK(int atk)
+    public void PlusATK(float atk)
     {
-        h_CurrentATK += atk;
-        PlayerPrefs.SetInt("ATKPlayer", h_CurrentATK);
+        h_MaxATK += atk;
+        PlayerPrefs.SetFloat("ATKPlayer", h_MaxATK);
        
     }
 
     // Set/Get Def Player
-
-    public int GetDEF()
+    public void UpLvDEF()
     {
-        return h_CurrentDEF;
+        if (GetGold() >= h_GoldDEF && h_LvDEF < 50)
+        {
+            h_LvDEF += 1;
+            PlayerPrefs.SetInt("LVDEF", h_LvDEF);
+            DecreaseGold(h_GoldDEF);
+            h_GoldDEF += (int)(h_GoldDEF / 5);
+
+            PlayerPrefs.SetFloat("GoldDEF", h_GoldDEF);
+            BonusDEF(10);
+        }
+        else
+        {
+            return;
+        }
+           
+           
+    }
+    public int GetLvDEF()
+    {
+        return h_LvDEF;
+    }
+    public float GetTotalDEF()
+    {
+        if (h_TotalDEF < (h_MaxDEF + h_BonusDEF))
+        {
+            h_TotalDEF=h_MaxDEF+h_BonusDEF;
+            PlayerPrefs.SetFloat("TotalDEF",h_TotalDEF);
+        }
+        return h_TotalDEF;
     }
 
-    public void PlusDEF(int def)
+    public float GetBonusDEF()
     {
-        h_CurrentDEF += def;
-        PlayerPrefs.SetInt("DEFPlayer", h_CurrentDEF);
+        return h_BonusDEF;
+    }
+
+    public void PlusDEF(float def)
+    {
+        h_MaxDEF += def;
+        PlayerPrefs.SetFloat("DEFPlayer", h_MaxDEF);
+    }
+    public void BonusDEF(float def)
+    {
+        h_BonusDEF += def;
+        PlayerPrefs.SetFloat("BonusDEF", h_BonusDEF);
+    }
+
+    public float GetGoldDEF()
+    {
+        return h_GoldDEF;
     }
 
     // Set/Get Gold
-    public int GetGold()
+    public float GetGold()
     {
         return h_Gold;
     }
 
-    public void TakeGold(int gold)
+    public void TakeGold(float gold)
     {
         h_Gold += gold;
-        PlayerPrefs.SetInt("Gold", h_Gold);
+        PlayerPrefs.SetFloat("Gold", h_Gold);
     }
 
-    public void DecreaseGold(int gold)
+    public void DecreaseGold(float gold)
     {
-        h_Gold -= gold;
-        if (h_Gold < 0)
-        {
-            h_Gold = 0;
-        }
-        PlayerPrefs.SetInt("Gold", h_Gold);
+        
+        
+            h_Gold -= gold;
+            PlayerPrefs.SetFloat("Gold", h_Gold);
+        
+        
+        
     }
 }

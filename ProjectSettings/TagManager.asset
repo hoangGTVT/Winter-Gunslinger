@@ -10,6 +10,8 @@ TagManager:
   - Player01Animation
   - Dead
   - UIPlayer
+  - BulletPLayer
+  - Bullet
   layers:
   - Default
   - TransparentFX

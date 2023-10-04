@@ -62,6 +62,7 @@ public class PlayerMoment : FindObject
 
     public void PlayerMove()
     {
+        
         PlayerAnimation.rb.velocity = new Vector2(PlayerMoment.Dir * PlayerMoment.moveSpeed, PlayerAnimation.rb.velocity.y);
     }
     

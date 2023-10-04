@@ -6,23 +6,27 @@ public class Waepon : MonoBehaviour
 {
     public Transform h_ShootingPoint;
     public GameObject[] h_Bullet;
-   
 
-    private int h_BulletCount;
-   
-    private void Start()
+
+    [SerializeField] private int h_BulletCount;
+    private void Awake()
     {
-        h_BulletCount = 2;
+        if (PlayerPrefs.GetInt("Bullet") == 0)
+        {
+            h_BulletCount = 0;
+            
+        }
+        else
+        {
+            h_BulletCount = PlayerPrefs.GetInt("Bullet");
+        }
     }
 
-    void Update()
-    {
-       
-    }
+    
 
     public void Shoot()
     {
-        // Gọi hàm CreateBullet() sau 1 giây
+        
         Invoke("CreateBullet", 0.25f);
     }
 
@@ -31,6 +35,12 @@ public class Waepon : MonoBehaviour
     {
         AudioManager.instance.Play("Bullet");
         GameObject bullet = Instantiate(h_Bullet[h_BulletCount], h_ShootingPoint.position, h_ShootingPoint.rotation);
+    }
+
+    public void SetBullet(int h)
+    {
+        h_BulletCount = h;
+        PlayerPrefs.SetInt("Bullet", h);
     }
 
 

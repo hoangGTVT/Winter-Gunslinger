@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAnimation : FindObject
@@ -15,6 +16,7 @@ public class PlayerAnimation : FindObject
     PlayerControls controls;
     [SerializeField]  bool h_shoot = false;
     [SerializeField] public float h_ShootingDelay = 0;
+    
     
     public bool h_IsRight = true;
     private  enum MovementState { idle, fly, jump,shoot,throws,run,attack}
@@ -84,7 +86,7 @@ public class PlayerAnimation : FindObject
             {
 
                 state = MovementState.run;
-
+               
 
             }
 
@@ -104,9 +106,12 @@ public class PlayerAnimation : FindObject
         {
             state = MovementState.fly;
         }
-            
 
-        
+
+        if (playerLife.GetIsDead() == true)
+        {
+            animator.SetTrigger("IsDead");
+        }
         
 
         if (h_shoot == true && h_ShootingDelay<=0)
@@ -119,11 +124,19 @@ public class PlayerAnimation : FindObject
 
        
         animator.SetInteger("State", (int)state);
+        if (playerLife.GetIsDizzy() == true)
+        {
+            animator.SetBool("IsHurt", true);
+        }
+        else
+        {
+            animator.SetBool("IsHurt",false);
+        }
 
 
     }
+   
 
-    
     private void IsRotate()
     {
         if(PlayerMoment.Dir>0 && !h_IsRight)

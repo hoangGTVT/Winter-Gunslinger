@@ -8,8 +8,9 @@ public class UIBar : FindObject
 {
     [SerializeField] public Slider[] h_Slider;
     protected static UIBar instance;
-    [SerializeField] protected GameObject h_UiPlayer;
+    [SerializeField] protected GameObject[] h_UiPlayer;
     public static UIBar Instance { get => instance; }
+    public PlayerLife playerLife;
 
 
     private void Update()
@@ -20,12 +21,29 @@ public class UIBar : FindObject
     protected void FindPlayer()
     {
         GameObject gameObject = base.FindObjectWithTag("Player01Animation");
+      
         if (gameObject != null)
         {
-            h_UiPlayer.SetActive(true);
-        }else { h_UiPlayer.SetActive(false); }
+            h_UiPlayer[0].SetActive(true);
+            playerLife = gameObject.GetComponent<PlayerLife>();
+        }
+        else { h_UiPlayer[0].SetActive(false); }
+
+        if (playerLife != null)
+        {
+            if (playerLife.GetIsDead() == true)
+            {
+                h_UiPlayer[1].SetActive(true);
+            }
+            else
+            {
+                h_UiPlayer[1].SetActive(false);
+            }
+        }
     }
-    public void SetMaxHealth(int maxhealth)
+
+
+    public void SetMaxHealth(float maxhealth)
     {
         h_Slider[0].maxValue = maxhealth;
         h_Slider[0].value = maxhealth;
@@ -36,12 +54,12 @@ public class UIBar : FindObject
     }
 
 
-    public void SetMaxEnergy(int maxhealth)
+    public void SetMaxEnergy(float maxhealth)
     {
         h_Slider[2].maxValue = maxhealth;
         h_Slider[2].value = maxhealth;
     }
-    public void SetEnergy(int health)
+    public void SetEnergy(float health)
     {
         h_Slider[2].value = health;
     }

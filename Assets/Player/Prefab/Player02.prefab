@@ -30,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4773396512165069640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.004, y: -0.011, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -103,12 +103,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 0}
+  h_HPPoint: 0
+  h_MPPoint: 0
   h_MaxHp: 0
   h_CurrentHp: 0
-  h_CurrentATK: 0
+  h_BonusHP: 0
+  h_TotalHP: 0
+  h_IsDead: 0
+  h_IsDizzy: 0
+  h_GoldHP: 0
+  h_LvHP: 0
+  h_MaxATK: 0
+  h_BonusATK: 0
+  h_TotalATK: 0
+  h_GoldATK: 0
+  h_LvATK: 0
   h_MaxEnergyFly: 0
+  h_GoldE: 0
+  h_TotalE: 0
   h_CurrentEnergyFly: 0
-  h_CurrentDEF: 0
+  h_BonusEnegry: 0
+  h_LvE: 0
+  h_MaxDEF: 0
+  h_BonusDEF: 0
+  h_TotalDEF: 0
+  h_GoldDEF: 0
+  h_LvDEF: 0
   h_MaxExp: 100
   h_CurrentExp: 0
   h_CurrentLevel: 1
@@ -214,7 +234,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.033685207, y: -0.0067368746}
+  m_Offset: {x: 0.044567823, y: -0.0067368746}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -225,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.63873386, y: 1.028846}
+  m_Size: {x: 0.3775525, y: 1.028846}
   m_EdgeRadius: 0
 --- !u!1 &6410415427167514946
 GameObject:
@@ -239,7 +259,7 @@ GameObject:
   - component: {fileID: 7957850021015665169}
   m_Layer: 0
   m_Name: PlayerShootng
-  m_TagString: Untagged
+  m_TagString: BulletPLayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +329,7 @@ Transform:
   - {fileID: 1765335183661862451}
   - {fileID: 8159217420849507060}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8572493905789517334
 GameObject:
