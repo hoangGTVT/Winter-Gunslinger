@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public static float speed = 10f;
+    public static float speed = 15f;
     public Rigidbody2D rb;
     public GameObject h_Blast;
     void Start()
@@ -15,13 +15,14 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         Destroy(gameObject, 1);
-      
+
+
     }
 
     // Update is called once per frame
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss"))
+        if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("Enemy"))
         {
             Instantiate(h_Blast, transform.position, Quaternion.identity);
             Destroy(gameObject);

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ public class PlayerLife : FindObject
 {
     
     public UIBar bar;
+    
 
     [SerializeField] protected int h_HPPoint;
     [SerializeField] protected int h_MPPoint;
@@ -361,7 +363,7 @@ public class PlayerLife : FindObject
 
     }
 
-    protected void SetValue()
+    public void SetValue()
     {
         bar.SetEnergy(h_CurrentEnergyFly);
         bar.SetEXP(h_CurrentExp);
@@ -370,7 +372,7 @@ public class PlayerLife : FindObject
     }
 
 
-    protected void SetMaxValue()
+    public void SetMaxValue()
     {
         bar.SetMaxEnergy(h_TotalE);
         bar.SetMaxHealth(h_TotalHP);
@@ -469,6 +471,7 @@ public class PlayerLife : FindObject
     public float GetEnergy1()
     {
         h_CurrentEnergyFly -= 5;
+        
         if (h_CurrentEnergyFly <= 0)
         {
             h_CurrentEnergyFly = 0;
@@ -664,7 +667,7 @@ public class PlayerLife : FindObject
        Destroy(gameObject,0.5f);
        
     }
-   protected void PlayerTakeDamage(float damage)
+   public void PlayerTakeDamage(float damage)
     {
        
 
@@ -689,7 +692,7 @@ public class PlayerLife : FindObject
     }
     
     
-    protected void PlayerTakeExp(float exp)
+    public void PlayerTakeExp(float exp)
     {
         h_CurrentExp += exp;
         PlayerPrefs.SetFloat("CurrentEXP", h_CurrentExp);
@@ -858,4 +861,6 @@ public class PlayerLife : FindObject
         
         
     }
+
+    
 }

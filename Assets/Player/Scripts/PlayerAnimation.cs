@@ -163,12 +163,5 @@ public class PlayerAnimation : FindObject
        
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Dead"))
-        {
-            playerLife.PlayerDead();
-        }
-
-    }
+   
 }

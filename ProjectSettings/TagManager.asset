@@ -12,6 +12,8 @@ TagManager:
   - UIPlayer
   - BulletPLayer
   - Bullet
+  - Enemy
+  - BulletEnemy
   layers:
   - Default
   - TransparentFX

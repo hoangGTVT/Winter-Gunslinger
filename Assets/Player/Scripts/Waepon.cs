@@ -34,7 +34,8 @@ public class Waepon : MonoBehaviour
 
     {
         AudioManager.instance.Play("Bullet");
-        GameObject bullet = Instantiate(h_Bullet[h_BulletCount], h_ShootingPoint.position, h_ShootingPoint.rotation);
+        var bullet = Instantiate(h_Bullet[h_BulletCount], h_ShootingPoint.position, h_ShootingPoint.rotation);
+        
     }
 
     public void SetBullet(int h)

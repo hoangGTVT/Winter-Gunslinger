@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : FindObject
@@ -8,9 +9,12 @@ public class PlayerManager : FindObject
 
     public PlayerLife playerLife;
     public Waepon waepon;
+    public GameObject game;
     public TextMeshProUGUI[] textMeshProUGUI;
     public TextMeshProUGUI[] textMeshProUGUI1;
+    public TextMeshProUGUI[] namePlayer;
     [SerializeField] protected GameObject h_PlayerPrefab;
+    [SerializeField] protected GameObject[] h_updragePlayer;
     void Update()
     {
         FindPlayer();
@@ -19,6 +23,7 @@ public class PlayerManager : FindObject
         {
             GameObject game= Instantiate(h_PlayerPrefab,new Vector3(0,0,0), Quaternion.identity);
         }
+       
 
     }
     public void Create()
@@ -47,6 +52,7 @@ public class PlayerManager : FindObject
             playerLife = gameObject.GetComponent<PlayerLife>();
             ShowText();
             ShowText1();
+            
         }
         else
         {
@@ -54,6 +60,36 @@ public class PlayerManager : FindObject
         }
         
     }
+
+    public void OnButtonPlayer()
+    {
+        GameObject gameObject = base.FindObjectWithTag("Player01Animation");
+        if (gameObject != null)
+        {
+            playerLife = gameObject.GetComponent<PlayerLife>();
+            AudioManager.instance.Play("Button");
+            h_updragePlayer[0].SetActive(true);
+        }
+        else
+        {
+            playerLife = null;
+        }
+    }
+    public void OnButtonPlayer1()
+    {
+        GameObject gameObject = base.FindObjectWithTag("Player01Animation");
+        if (gameObject != null)
+        {
+            playerLife = gameObject.GetComponent<PlayerLife>();
+            AudioManager.instance.Play("Button");
+            h_updragePlayer[1].SetActive(true);
+        }
+        else
+        {
+            playerLife = null;
+        }
+    }
+
 
     protected void ShowText()
     {
@@ -69,6 +105,8 @@ public class PlayerManager : FindObject
         textMeshProUGUI[9].text = "" + playerLife.GetGold();
         textMeshProUGUI[10].text=""+playerLife.GetHPPoint();
         textMeshProUGUI[11].text=""+ playerLife.GetMPPoint();
+        namePlayer[0].text = "" + PlayerPrefs.GetString("NamePlayer");
+        namePlayer[1].text = "" + PlayerPrefs.GetString("NamePlayer");
     }
 
     protected void ShowText1()
@@ -182,6 +220,7 @@ public class PlayerManager : FindObject
         if (waepon != null)
         {
             waepon.SetBullet(0);
+            game.SetActive(true);
         }
         else
         {
@@ -193,6 +232,7 @@ public class PlayerManager : FindObject
         if (waepon != null)
         {
             waepon.SetBullet(1);
+            game.SetActive(true);
         }
         else
         {
@@ -205,6 +245,7 @@ public class PlayerManager : FindObject
         if (waepon != null)
         {
             waepon.SetBullet(2);
+            game.SetActive(true);
         }
         else
         {
@@ -212,27 +253,5 @@ public class PlayerManager : FindObject
         }
     }
 
-    public void Bullet4()
-    {
-        if (waepon != null)
-        {
-            waepon.SetBullet(3);
-        }
-        else
-        {
-            return;
-        }
-    }
-
-    public void Bullet5()
-    {
-        if (waepon != null)
-        {
-            waepon.SetBullet(4);
-        }
-        else
-        {
-            return;
-        }
-    }
+    
 }
