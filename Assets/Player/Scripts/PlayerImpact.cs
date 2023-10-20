@@ -15,7 +15,7 @@ public class PlayerImpact : FindObject
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-            playerLife.PlayerTakeDamage(playerLife.GetTotalHP() / 5);
+            playerLife.PlayerTakeDamage(playerLife.GetTotalHP() / 4);
         }
 
         
@@ -23,12 +23,6 @@ public class PlayerImpact : FindObject
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("BulletEnemy"))
-        {
-            playerLife.PlayerTakeDamage(playerLife.GetTotalATK()*2);
-        }
-    }
+   
 
 }

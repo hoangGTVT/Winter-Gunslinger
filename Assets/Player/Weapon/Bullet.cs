@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     {
         
         rb.velocity=transform.right*speed;
+        
     }
     private void Update()
     {
@@ -24,6 +25,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Boss") || collision.gameObject.CompareTag("Enemy"))
         {
+            
             Instantiate(h_Blast, transform.position, Quaternion.identity);
             Destroy(gameObject);
             

@@ -27,7 +27,8 @@ public class Waepon : MonoBehaviour
     public void Shoot()
     {
         
-        Invoke("CreateBullet", 0.25f);
+        //Invoke("CreateBullet", 0.1f);
+        CreateBullet();
     }
 
     private void CreateBullet()

@@ -15,7 +15,10 @@ public class PlayerMoment : FindObject
     [SerializeField] private int numberOfJump = 0;
    
     [SerializeField] private LayerMask jumpableGround;
-    [SerializeField] public bool h_IsFly = false;
+    
+
+    public GameObject[] h_Stone;
+    public Transform h_StonePoint;
     
     
     private void Awake()
@@ -28,15 +31,17 @@ public class PlayerMoment : FindObject
            
         };
         controls.Land.Jump.performed += ctx => {
-            GameObject gameObject= base.FindObjectWithTag("Player01");
+            GameObject gameObject= base.FindObjectWithTag("Player01Animation");
             if (gameObject != null) { Jump(); }
         }; 
-        controls.Land.Fly.performed += ctx => {
-            GameObject gameObject = base.FindObjectWithTag("Player01");
+        /*controls.Land.Fly.performed += ctx => {
+            GameObject gameObject = base.FindObjectWithTag("Player01Animation");
             if (gameObject != null) { Fly(); ; }
-        }; 
+        };*/
+        controls.Land.Fly.performed += ctx => Fly();
             
-        
+
+
 
 
 
@@ -50,9 +55,9 @@ public class PlayerMoment : FindObject
     // Update is called once per frame
     void Update()
     {
-       
-       
-        IsFly();    
+
+        
+
 
     }
     private void FixedUpdate()
@@ -92,19 +97,14 @@ public class PlayerMoment : FindObject
     }
 
     
-     public void IsFly()
-    {
-        if (IsGrounded() )
-        {
-            h_IsFly = false;
-        }
-    }
+     
     public void Fly()
     {
-        if (playerLife.GetEnergy() > 0)
+        if (playerLife.GetEnergy() >= 20 && h_StonePoint!= null)
         {
-            PlayerAnimation.rb.AddForce(Vector3.up * 4, ForceMode2D.Impulse);
-            h_IsFly = true;
+            int randomNumber = Mathf.FloorToInt(Random.Range(0f, 3f));
+            GameObject gameObject = Instantiate(h_Stone[randomNumber], h_StonePoint.position,Quaternion.identity);
+           
             playerLife.GetEnergy1();
         }
         else

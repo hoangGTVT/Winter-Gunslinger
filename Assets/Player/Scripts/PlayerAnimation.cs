@@ -10,16 +10,16 @@ public class PlayerAnimation : FindObject
     public PlayerLife playerLife;
     public PlayerMoment playerMoment;
     public static Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
     public static SpriteRenderer sp;
     public static BoxCollider2D coll;
     PlayerControls controls;
-    [SerializeField]  bool h_shoot = false;
+   
     [SerializeField] public float h_ShootingDelay = 0;
     
     
     public bool h_IsRight = true;
-    private  enum MovementState { idle, fly, jump,shoot,throws,run,attack}
+    private  enum MovementState { idle, run, jump, fly }
 
    
     private void Awake()
@@ -29,9 +29,11 @@ public class PlayerAnimation : FindObject
 
         controls.Land.Shoot.performed += ctx => 
         {
-            if (h_ShootingDelay <= 0)
+            if (h_ShootingDelay <= 0&& animator!=null)
             {
-                h_shoot = true;
+                //h_shoot = true;
+                animator = GetComponent<Animator>();
+                animator.SetTrigger("IsShoot");
             }
              
 
@@ -75,8 +77,8 @@ public class PlayerAnimation : FindObject
     {
         MovementState state;
 
-        if (playerMoment.h_IsFly == false)
-        {
+        
+        
             if (PlayerMoment.Dir == 0)
             {
 
@@ -101,11 +103,7 @@ public class PlayerAnimation : FindObject
             {
                 state = MovementState.jump;
             }
-        }
-        else
-        {
-            state = MovementState.fly;
-        }
+       
 
 
         if (playerLife.GetIsDead() == true)
@@ -114,24 +112,17 @@ public class PlayerAnimation : FindObject
         }
         
 
-        if (h_shoot == true && h_ShootingDelay<=0)
+        /*if (h_shoot == true && h_ShootingDelay<=0)
         {
-            state = MovementState.shoot;
+            animator.SetTrigger("IsShoot");
             Shooting();
             h_ShootingDelay = 0.5f;
-        }
+        }*/
         
 
        
         animator.SetInteger("State", (int)state);
-        if (playerLife.GetIsDizzy() == true)
-        {
-            animator.SetBool("IsHurt", true);
-        }
-        else
-        {
-            animator.SetBool("IsHurt",false);
-        }
+        
 
 
     }
@@ -154,11 +145,20 @@ public class PlayerAnimation : FindObject
     }
     public void Shooting()
     {
+
+        if (h_ShootingDelay <= 0)
+        {
+            waepon1.Shoot();
+            h_ShootingDelay = 0.1f;
+        }
+        else
+        {
+            return;
+        }
+
+
+
         
-         h_shoot = false;
-       
-        
-         waepon1.Shoot();
         
        
     }

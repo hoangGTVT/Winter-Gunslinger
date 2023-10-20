@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -7,10 +8,13 @@ public class PlayerLife : FindObject
 {
     
     public UIBar bar;
+    public GameObject[] h_HpPopUp;
+   
     
 
     [SerializeField] protected int h_HPPoint;
     [SerializeField] protected int h_MPPoint;
+    [SerializeField] protected int h_Key=0;
 
     // HP
     [SerializeField] protected float h_MaxHp;
@@ -51,14 +55,14 @@ public class PlayerLife : FindObject
     [SerializeField] protected float h_CurrentLevel=1;
     [SerializeField] protected bool h_IsLevelUp=false;
     [SerializeField] protected float h_EnergyCooldown = 5f;
-    [SerializeField] bool h_canEnergy = true;
+    
 
     //Gold
     [SerializeField] protected float h_Gold;
     private void Awake()
     {
 
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         FindUiBar();
         GetStartValue();
         
@@ -408,6 +412,7 @@ public class PlayerLife : FindObject
         
         if (GetGold() >= h_GoldE&& h_LvE<50)
         {
+            AudioManager.instance.Play("Buy");
             h_LvE += 1;
             PlayerPrefs.SetInt("LVE", h_LvE);
             DecreaseGold(h_GoldE);
@@ -470,7 +475,10 @@ public class PlayerLife : FindObject
     }
     public float GetEnergy1()
     {
-        h_CurrentEnergyFly -= 5;
+        GameObject point = Instantiate(h_HpPopUp[1], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "-" + 20;
+
+        h_CurrentEnergyFly -= 20;
         
         if (h_CurrentEnergyFly <= 0)
         {
@@ -485,6 +493,7 @@ public class PlayerLife : FindObject
         if (GetMPPoint() > 0)
         {
             MinusMPPoint();
+            AudioManager.instance.Play("Heal");
             StartCoroutine(HealEnegryEvery());
         }
         else
@@ -496,12 +505,15 @@ public class PlayerLife : FindObject
     private IEnumerator HealEnegryEvery()
     {
         float healEnegry = 0;
-        while (healEnegry<100)
+        while (healEnegry<50)
         {
-            healEnegry += 5;
+            GameObject point = Instantiate(h_HpPopUp[1], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+            point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + 10;
+
+            healEnegry += 10;
             yield return new WaitForSeconds(0.1f);
             
-                h_CurrentEnergyFly += 5;
+                h_CurrentEnergyFly += 10;
                 if (h_CurrentEnergyFly >h_TotalE)
                 {
                     h_CurrentEnergyFly = h_TotalE;  
@@ -519,6 +531,9 @@ public class PlayerLife : FindObject
             
             if (h_CurrentEnergyFly < h_MaxEnergyFly)
             {
+                GameObject point = Instantiate(h_HpPopUp[1], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+                point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + 5;
+
                 h_CurrentEnergyFly += 5;
                 if (h_CurrentEnergyFly > h_MaxEnergyFly)
                 {
@@ -553,6 +568,7 @@ public class PlayerLife : FindObject
     {
         if (GetGold() >= h_GoldHP && h_LvHP < 50)
         {
+            AudioManager.instance.Play("Buy");
             h_LvHP += 1;
             PlayerPrefs.SetInt("LVHP", h_LvHP);
             DecreaseGold(h_GoldHP);
@@ -610,6 +626,7 @@ public class PlayerLife : FindObject
         if (GetHPPoint() > 0)
         {
             MinusHPPoint();
+            AudioManager.instance.Play("Heal");
             StartCoroutine(HealHPEveryTime());
         }
        
@@ -619,11 +636,12 @@ public class PlayerLife : FindObject
     private IEnumerator HealHPEveryTime()
     {
         float heal = 0;
-        while(heal<300)
+        while(heal<200)
         {
-            heal += 3;
-           
-            h_CurrentHp += 3;
+            heal += 20;
+            GameObject point = Instantiate(h_HpPopUp[0], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+            point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + 20;
+            h_CurrentHp += 20;
             if (h_CurrentHp > h_TotalHP)
             {
                 h_CurrentHp = h_TotalHP;
@@ -669,10 +687,17 @@ public class PlayerLife : FindObject
     }
    public void PlayerTakeDamage(float damage)
     {
-       
-
-        h_CurrentHp -= (int)(damage-(GetTotalDEF()/20*2));
+        h_CurrentHp -= (int)(damage - (GetTotalDEF() / 15 * 2));
+        Vector3 vector3= transform.position;
+        vector3.x = transform.position.x-0.5f;
         
+        GameObject point= Instantiate(h_HpPopUp[0], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text= "-" + (int)(damage - (GetTotalDEF() / 15 * 2));
+
+        Animator animator =GetComponent<Animator>();
+        
+        AudioManager.instance.Play("Hurt");
+        animator.SetTrigger("IsHurt");
         if (h_CurrentHp <= 0)
         {
             h_CurrentHp = 0;
@@ -694,10 +719,17 @@ public class PlayerLife : FindObject
     
     public void PlayerTakeExp(float exp)
     {
+        GameObject point = Instantiate(h_HpPopUp[2], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + exp;
+
         h_CurrentExp += exp;
         PlayerPrefs.SetFloat("CurrentEXP", h_CurrentExp);
         if (h_CurrentExp >= h_MaxExp)
         {
+            AudioManager.instance.Play("LV");
+            GameObject point1 = Instantiate(h_HpPopUp[2], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
+            point1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Level Up";
+
             h_CurrentLevel += 1;
             PlusATK(5);
             PlusDEF(10);
@@ -734,6 +766,7 @@ public class PlayerLife : FindObject
     {
         if (GetGold() >= h_GoldATK && h_LvATK < 50)
         {
+            AudioManager.instance.Play("Buy");
             h_LvATK += 1;
             PlayerPrefs.SetInt("LVATK", h_LvATK);
             DecreaseGold(h_GoldATK);
@@ -789,6 +822,7 @@ public class PlayerLife : FindObject
     {
         if (GetGold() >= h_GoldDEF && h_LvDEF < 50)
         {
+            AudioManager.instance.Play("Buy");
             h_LvDEF += 1;
             PlayerPrefs.SetInt("LVDEF", h_LvDEF);
             DecreaseGold(h_GoldDEF);
@@ -860,6 +894,18 @@ public class PlayerLife : FindObject
         
         
         
+    }
+
+
+    //Key
+    public int GetKey()
+    {
+        return h_Key;
+    }
+
+    public void PlusKey()
+    {
+        h_Key += 1;
     }
 
     

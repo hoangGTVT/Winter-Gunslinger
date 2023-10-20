@@ -7,47 +7,65 @@ public class BulletEnemy : FindObject
 {
     private Rigidbody2D rb;
     [SerializeField] protected int h_BulletSpeed = 3;
+    public float h_PlusDamege;
+
+    private SpriteRenderer sprite;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        FindPlayer();
     }
     // Update is called once per frame
     void Update()
     {
-        FindPlayer();
+        
     }
 
     protected void FindPlayer()
     {
-        GameObject gameObject1 = base.FindObjectWithTag("Player01Animation");
+        GameObject playerObject = GameObject.FindWithTag("Player01Animation");
 
-        if (gameObject1 != null)
+        if (playerObject != null)
         {
-            Transform player = gameObject1.transform;
-            float direction = Vector3.Distance(player.position, transform.position);
+            Transform playerTransform = playerObject.transform;
+            float enemyX = transform.position.x;
+            float playerX = playerTransform.position.x;
 
+            if (playerX < enemyX)
+            {
+                sprite.flipX = true;
+            }
+            else if (playerX > enemyX)
+            {
+                sprite.flipX = false;
+            }
+            Vector3 playerPosition = playerObject.transform.position;
 
-            Vector3 shootingDirection = (player.position - transform.position).normalized;
+            // Tính hướng bắn tĩnh từ vị trí hiện tại của đạn đến vị trí của người chơi
+            Vector3 shootingDirection = (playerPosition - transform.position).normalized;
 
             // Đặt tốc độ cho đạn và bắn nó
             rb.velocity = shootingDirection * h_BulletSpeed;
 
-            // Hủy đạn sau một thời gian
-            Destroy(gameObject, 2f);
+            // Hủy đạn sau một khoảng thời gian
+            Destroy(gameObject, 1.5f);
         }
         else
         {
             return;
         }
-
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player01Animation"))
         {
             Destroy(gameObject);
+            PlayerLife playerLife= collision.gameObject.GetComponent<PlayerLife>();
+            playerLife.PlayerTakeDamage(playerLife.GetTotalATK()+h_PlusDamege);
         }
     }
 }

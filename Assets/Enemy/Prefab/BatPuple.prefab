@@ -551,7 +551,7 @@ Transform:
   - {fileID: 3753875354173083856}
   - {fileID: 4239805111163180152}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4712649345725130143
 SpriteRenderer:
@@ -710,16 +710,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7870609c8b39a49bc1e1715d553aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpFloat: {fileID: 3344422930984990073, guid: 69dbeacf39ebdb34b94eb90336f5cc01, type: 3}
   barEnemy: {fileID: 1713872064312163649}
   playerLife: {fileID: 0}
   h_IndexHP: 1.5
   h_HPbonus: 0
+  h_ItemSpawn: 0
+  h_ItemSpawn1: 0
   h_MaxHP: 0
   h_CurrentHP: 0
   textMeshProUGUI:
   - {fileID: 8443168769139114035}
   - {fileID: 7328450137856329233}
-  itemPrefab: {fileID: 8853091328396630525, guid: 79623dbb0a4ff614a8a4f0107279e30b, type: 3}
+  itemPrefab:
+  - {fileID: 8853091328396630525, guid: 79623dbb0a4ff614a8a4f0107279e30b, type: 3}
+  - {fileID: 5260457395965442103, guid: cdf37056b2ee40d44b2e1fd6dbc96d5c, type: 3}
+  - {fileID: 8489765843845479978, guid: b4dd19f6485a9794f82e67b541ae1fd0, type: 3}
+  bat: {fileID: 0}
 --- !u!114 &1713872064312163649
 MonoBehaviour:
   m_ObjectHideFlags: 0

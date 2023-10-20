@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class EnemyLife : FindObject
 {
+    public GameObject hpFloat;
     public HpBarEnemy barEnemy; 
     public PlayerLife playerLife;
     public float h_IndexHP = 2;
     public int h_HPbonus;
+    public bool h_ItemSpawn=false;
+    public bool h_ItemSpawn1 = false;
 
     [SerializeField] protected float h_MaxHP;
     [SerializeField] protected float h_CurrentHP;
     [SerializeField] protected TextMeshProUGUI[] textMeshProUGUI;
 
-    public GameObject itemPrefab; // Thiết lập prefab của item trong Inspector
+    public GameObject[] itemPrefab; // Thiết lập prefab của item trong Inspector
     public GameObject bat;
     private void Awake()
     {
@@ -32,7 +35,8 @@ public class EnemyLife : FindObject
     {
         
         SetMaxHP();
-       
+        Destroy(gameObject, 10);
+
     }
 
     // Update is called once per frame
@@ -41,7 +45,12 @@ public class EnemyLife : FindObject
         FindPlayer();
         ShowText();
        
+       
     }
+
+    
+
+    
 
     public void ShowText() {
         textMeshProUGUI[0].text = "/" + h_MaxHP;
@@ -70,6 +79,9 @@ public class EnemyLife : FindObject
 
     public void TakeDamege(float damage)
     {
+        GameObject point = Instantiate(hpFloat,new Vector3(transform.position.x,transform.position.y+0.5f,transform.position.z), Quaternion.identity);
+        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "-" + damage;
+
         h_CurrentHP -= (int)damage;
        
         SetHP();
@@ -113,7 +125,7 @@ public class EnemyLife : FindObject
     {
         if (collision.gameObject.CompareTag("Player01Animation"))
         {
-            EnemyDead();
+            BatDie();
         }
     }
 
@@ -123,18 +135,38 @@ public class EnemyLife : FindObject
        
         
         playerLife.PlayerTakeExp(playerLife.GetLevel() + 20);
-
-        float drop = 0.5f;
+        if (!h_ItemSpawn1)
+        {
+            Instantiate(itemPrefab[0], transform.position, Quaternion.identity);
+            h_ItemSpawn1 = true;
+        }
+        float drop = 0.1f;
+        int randomNumber = Random.Range(0, 2);
         if (Random.value <= drop)
         {
-            // Tạo một bản sao của itemPrefab và đặt nó tại vị trí của enemy
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
-            
+            if (randomNumber == 0 && !h_ItemSpawn)
+            {
+                
+                Instantiate(itemPrefab[1], transform.position, Quaternion.identity);
+                h_ItemSpawn = true;
+
+            }else if (randomNumber == 1 && !h_ItemSpawn)
+            {
+                
+                Instantiate(itemPrefab[2], transform.position, Quaternion.identity);
+                h_ItemSpawn = true;
+            }
+
         }
-       
+
+        BatDie();
+    }
+
+    public void BatDie()
+    {
         Destroy(gameObject);
     }
-    
+
 
 }
 

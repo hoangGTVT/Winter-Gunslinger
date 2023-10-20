@@ -10,17 +10,18 @@ public class CreateBat : MonoBehaviour
    
     void Start()
     {
-        Instantiate(bat, transform.position, Quaternion.identity);
+        InvokeRepeating("SpawnBat", 0, 10.5f);
     }
     
 
     
     void Update()
     {
-       
-        
-            
-            
-        
+ 
+    }
+
+    public void SpawnBat()
+    {
+        Instantiate(bat, transform.position, Quaternion.identity);
     }
 }

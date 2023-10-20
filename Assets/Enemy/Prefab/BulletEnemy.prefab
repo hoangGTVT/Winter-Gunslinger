@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   h_BulletSpeed: 3
+  h_PlusDamege: 5
 --- !u!61 &4296549488318419830
 BoxCollider2D:
   m_ObjectHideFlags: 0
