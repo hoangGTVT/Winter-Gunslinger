@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bringer-of-Death_Attack_9_11
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1
+        width: 112
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb936d1dfc002f3468a5385856bfa12c
+      internalID: -1593103333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +166,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bringer-of-Death_Attack_9_0: -173016242
+      Bringer-of-Death_Attack_9_1: -1554704026
+      Bringer-of-Death_Attack_9_10: 403595867
+      Bringer-of-Death_Attack_9_11: -1593103333
+      Bringer-of-Death_Attack_9_12: 2097838886
+      Bringer-of-Death_Attack_9_13: 885601474
+      Bringer-of-Death_Attack_9_14: -640467738
+      Bringer-of-Death_Attack_9_2: -730572769
+      Bringer-of-Death_Attack_9_3: -394053440
+      Bringer-of-Death_Attack_9_4: 820210949
+      Bringer-of-Death_Attack_9_5: -1967567692
+      Bringer-of-Death_Attack_9_6: -951186405
+      Bringer-of-Death_Attack_9_7: -236266230
+      Bringer-of-Death_Attack_9_8: 1187913998
+      Bringer-of-Death_Attack_9_9: -1001169081
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

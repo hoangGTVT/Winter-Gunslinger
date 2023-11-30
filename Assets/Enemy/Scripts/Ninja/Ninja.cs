@@ -7,7 +7,7 @@ public class Ninja : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator animator;
     [SerializeField] GameObject h_BulletEnemy;
-    public bool h_IsShoot = true;
+    public float h_IsShoot = 2;
 
     [SerializeField] GameObject h_HP;
 
@@ -21,18 +21,18 @@ public class Ninja : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        h_IsShoot-=Time.deltaTime;
     }
 
     public void Attack1()
     {
-        if (h_PointShooting != null)
+        if (h_PointShooting != null )
         {
-            h_IsShoot = false;
+            
             GameObject game = Instantiate(h_BulletEnemy, h_PointShooting.position, Quaternion.identity);
             AudioManager.instance.Play("EnemyAttack");
-
-            h_IsShoot = true;
+            h_IsShoot = 1;
+           
         }
         else
         {
@@ -45,13 +45,13 @@ public class Ninja : MonoBehaviour
     {
         GameObject player01Animation = GameObject.FindGameObjectWithTag("Player01Animation");
 
-        if (player01Animation != null)
+        if (player01Animation != null )
         {
             Transform playerTransform = player01Animation.transform;
 
             float direction = Vector3.Distance(playerTransform.position, transform.position);
 
-            if (direction <= 5f && h_IsShoot == true)
+            if (direction <= 7f&& h_IsShoot<=0)
             {
                 animator.SetTrigger("IsAttack");
 

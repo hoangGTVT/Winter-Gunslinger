@@ -9,6 +9,7 @@ public class PlayerLife : FindObject
     
     public UIBar bar;
     public GameObject[] h_HpPopUp;
+    public GameObject h_Heal;
    
     
 
@@ -62,7 +63,7 @@ public class PlayerLife : FindObject
     private void Awake()
     {
 
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         FindUiBar();
         GetStartValue();
         
@@ -91,7 +92,7 @@ public class PlayerLife : FindObject
         {
 
 
-            TakeGold(50);
+            TakeGold(100);
             
 
         }
@@ -105,7 +106,7 @@ public class PlayerLife : FindObject
         if (Input.GetKeyDown(KeyCode.B))
         {
 
-           PlayerTakeDamage(50);
+            PlayerTakeExp(50);
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -113,11 +114,7 @@ public class PlayerLife : FindObject
             PlusHPPoint();
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-
-            PlayerTakeExp(50);
-        }
+        
 
         SetValue();
        
@@ -720,7 +717,7 @@ public class PlayerLife : FindObject
     public void PlayerTakeExp(float exp)
     {
         GameObject point = Instantiate(h_HpPopUp[2], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
-        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + exp;
+        point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + exp+" Exp";
 
         h_CurrentExp += exp;
         PlayerPrefs.SetFloat("CurrentEXP", h_CurrentExp);
@@ -729,7 +726,7 @@ public class PlayerLife : FindObject
             AudioManager.instance.Play("LV");
             GameObject point1 = Instantiate(h_HpPopUp[2], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
             point1.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Level Up";
-
+            Instantiate(h_Heal, new Vector3(transform.position.x, transform.position.y - 0.4f, transform.position.z), quaternion.identity);
             h_CurrentLevel += 1;
             PlusATK(5);
             PlusDEF(10);

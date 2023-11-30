@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - BulletEnemy
   - Dragon
+  - PointLife
   layers:
   - Default
   - TransparentFX

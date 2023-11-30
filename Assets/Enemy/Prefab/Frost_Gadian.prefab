@@ -885,7 +885,7 @@ MonoBehaviour:
   hpFloat: {fileID: 3344422930984990073, guid: 69dbeacf39ebdb34b94eb90336f5cc01, type: 3}
   barEnemy: {fileID: 6746223618464498610}
   playerLife: {fileID: 0}
-  h_IndexHP: 3
+  h_IndexHP: 12
   h_HPbonus: 0
   h_ItemSpawn: 0
   h_ItemSpawn1: 0

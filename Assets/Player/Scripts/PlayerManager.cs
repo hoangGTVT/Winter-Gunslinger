@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : FindObject
 {
@@ -15,21 +16,64 @@ public class PlayerManager : FindObject
     public TextMeshProUGUI[] namePlayer;
     [SerializeField] protected GameObject h_PlayerPrefab;
     [SerializeField] protected GameObject[] h_updragePlayer;
+    [SerializeField] protected GameObject h_PLayerDead;
+
+    
     void Update()
     {
         FindPlayer();
         FindWeapon();
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            GameObject game= Instantiate(h_PlayerPrefab,new Vector3(0,0,0), Quaternion.identity);
-        }
+        
        
 
     }
     public void Create()
     {
         AudioManager.instance.Play("Button");
-        GameObject game = Instantiate(h_PlayerPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        if (PlayerPrefs.GetFloat("Gold") > 300)
+        {
+            float b = PlayerPrefs.GetFloat("Gold");
+            b -= 300;
+            PlayerPrefs.SetFloat("Gold", b);
+            int c = PlayerPrefs.GetInt("Map");
+            switch(c)
+            {
+                case 0:
+                    GameObject game = Instantiate(h_PlayerPrefab, new Vector3(-13, -6, 0), Quaternion.identity);
+                    break;
+                case 1:
+                    GameObject game1 = Instantiate(h_PlayerPrefab, new Vector3(11, -7, 0), Quaternion.identity);
+                    break;
+                case 2:
+                    GameObject game2 = Instantiate(h_PlayerPrefab, new Vector3(-12, 0, 0), Quaternion.identity);
+                    break;
+                case 3:
+                    GameObject game3 = Instantiate(h_PlayerPrefab, new Vector3(17, 1, 0), Quaternion.identity);
+                    break;
+                case 4:
+                    GameObject game4 = Instantiate(h_PlayerPrefab, new Vector3(-10, -1.1f, 0), Quaternion.identity);
+                    break;
+                case 5:
+                    GameObject game5 = Instantiate(h_PlayerPrefab, new Vector3(-5, -6, 0), Quaternion.identity);
+                    break;
+
+
+            }
+
+            
+           
+        }
+        else
+        {
+            h_PLayerDead.SetActive(true);
+        }
+
+
+    }
+
+    public void Home()
+    {
+        SceneManager.LoadScene("StartGame");
     }
 
     protected void FindWeapon()
@@ -127,6 +171,44 @@ public class PlayerManager : FindObject
         textMeshProUGUI1[12].text = "" + playerLife.GetTotalDEF();
         textMeshProUGUI1[13].text = "" + playerLife.GetTotalATK();
 
+    }
+
+    public void BuyHpPoint()
+    {
+        if (playerLife != null)
+        {
+            AudioManager.instance.Play("Button");
+            if (playerLife.GetGold() >= 200)
+            {
+                playerLife.DecreaseGold(200);
+                playerLife.PlusHPPoint();
+                h_updragePlayer[3].SetActive(true);
+            }
+            else
+            {
+                h_updragePlayer[2].SetActive(true);
+            }
+            
+        }
+    }
+
+    public void BuyMpPoint()
+    {
+        if (playerLife != null)
+        {
+            AudioManager.instance.Play("Button");
+            if (playerLife.GetGold() >= 200)
+            {
+                playerLife.DecreaseGold(200);
+                playerLife.PlusMPPoint();
+                h_updragePlayer[3].SetActive(true);
+            }
+            else
+            {
+                h_updragePlayer[2].SetActive(true);
+            }
+
+        }
     }
 
     public void HpPoint()
@@ -230,10 +312,18 @@ public class PlayerManager : FindObject
     }
     public void Bullet2()
     {
-        if (waepon != null)
+        if (waepon != null  )
         {
-            waepon.SetBullet(1);
-            game.SetActive(true);
+            if(PlayerPrefs.GetFloat("ChooseBullet") > 0)
+            {
+                waepon.SetBullet(1);
+                game.SetActive(true);
+            }
+            else
+            {
+                h_updragePlayer[4].SetActive(true);
+            }
+           
         }
         else
         {
@@ -245,8 +335,15 @@ public class PlayerManager : FindObject
     {
         if (waepon != null)
         {
-            waepon.SetBullet(2);
-            game.SetActive(true);
+            if (PlayerPrefs.GetFloat("ChooseBullet") > 1)
+            {
+                waepon.SetBullet(2);
+                game.SetActive(true);
+            }
+            else
+            {
+                h_updragePlayer[4].SetActive(true);
+            }
         }
         else
         {

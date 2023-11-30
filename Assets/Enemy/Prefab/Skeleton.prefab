@@ -858,7 +858,7 @@ MonoBehaviour:
   h_ItemSpawn: 0
   h_ItemSpawn1: 0
   h_ItemSpawn2: 0
-  h_Exp: 20
+  h_Exp: 10
   sprite: {fileID: 0}
   animator: {fileID: 0}
   h_IsShoot: 1

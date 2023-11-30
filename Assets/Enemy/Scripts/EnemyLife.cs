@@ -35,7 +35,7 @@ public class EnemyLife : FindObject
     {
         
         SetMaxHP();
-        Destroy(gameObject, 10);
+        
 
     }
 

@@ -6,7 +6,7 @@ using UnityEngine.U2D;
 public class BulletEnemy : FindObject
 {
     private Rigidbody2D rb;
-    [SerializeField] protected int h_BulletSpeed = 3;
+    [SerializeField] public int h_BulletSpeed = 10;
     public float h_PlusDamege;
 
     private SpriteRenderer sprite;
@@ -33,18 +33,26 @@ public class BulletEnemy : FindObject
             float enemyX = transform.position.x;
             float playerX = playerTransform.position.x;
 
-            if (playerX < enemyX)
+            if (playerX > enemyX)
             {
-                sprite.flipX = true;
+                Vector3 newRotation = transform.eulerAngles;
+                newRotation.y = 0; // Đặt góc y về 0
+                transform.eulerAngles = newRotation;
             }
-            else if (playerX > enemyX)
+            else if (playerX < enemyX)
             {
-                sprite.flipX = false;
+                Vector3 newRotation = transform.eulerAngles;
+                newRotation.y = 180; // Đặt góc y về 180 để quay ngược lại
+                transform.eulerAngles = newRotation;
             }
+
             Vector3 playerPosition = playerObject.transform.position;
 
             // Tính hướng bắn tĩnh từ vị trí hiện tại của đạn đến vị trí của người chơi
             Vector3 shootingDirection = (playerPosition - transform.position).normalized;
+
+            float angle = Mathf.Atan2(shootingDirection.y, shootingDirection.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
             // Đặt tốc độ cho đạn và bắn nó
             rb.velocity = shootingDirection * h_BulletSpeed;
@@ -54,6 +62,7 @@ public class BulletEnemy : FindObject
         }
         else
         {
+            Destroy(gameObject, 1.5f);
             return;
         }
     }

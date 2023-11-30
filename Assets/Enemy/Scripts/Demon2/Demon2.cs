@@ -7,7 +7,7 @@ public class Demon2 : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator animator;
     [SerializeField] public GameObject h_BulletEnemy;
-    public bool h_IsShoot = true;
+    public float h_IsShoot = 2;
 
     public Transform h_PointShooting;
     [SerializeField] GameObject h_HP;
@@ -20,18 +20,18 @@ public class Demon2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        h_IsShoot-= Time.deltaTime;
     }
 
     public void Attack1()
     {
-        if (h_PointShooting != null)
+        if (h_PointShooting != null )
         {
-            h_IsShoot = false;
+            
             GameObject game = Instantiate(h_BulletEnemy, h_PointShooting.position, Quaternion.identity);
             AudioManager.instance.Play("EnemyAttack");
-
-            h_IsShoot = true;
+            h_IsShoot=2;
+            
         }
         else
         {
@@ -50,7 +50,7 @@ public class Demon2 : MonoBehaviour
 
             float direction = Vector3.Distance(playerTransform.position, transform.position);
 
-            if (direction <= 6f && h_IsShoot == true)
+            if (direction <= 7f && h_IsShoot <= 0)
             {
                 animator.SetTrigger("IsAttack");
 

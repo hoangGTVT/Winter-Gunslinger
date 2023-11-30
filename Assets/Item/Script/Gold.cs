@@ -19,7 +19,7 @@ public class Gold : MonoBehaviour
             GameObject point = Instantiate(goldText, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
             point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + 20;
 
-            playerLife.TakeGold(30);
+            playerLife.TakeGold(20);
             AudioManager.instance.Play("Item");
             Destroy(gameObject);
         }
