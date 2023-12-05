@@ -68,9 +68,9 @@ public class Bringer : MonoBehaviour
             }else if(randomNumber == 1)
             {
                 Vector3 vector3 = gameObject.transform.position;
-                GameObject game= Instantiate(h_BulletEnemy2[0], new Vector3(gameObject.transform.position.x+2,gameObject.transform.position.y),Quaternion.identity);
-                GameObject game1 = Instantiate(h_BulletEnemy2[0], new Vector3(gameObject.transform.position.x - 2, gameObject.transform.position.y), Quaternion.identity);
-                GameObject game3 = Instantiate(h_BulletEnemy2[1], new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+3), Quaternion.identity);
+                GameObject game= Instantiate(h_BulletEnemy2[0], new Vector3(gameObject.transform.position.x+3,gameObject.transform.position.y),Quaternion.identity);
+                GameObject game1 = Instantiate(h_BulletEnemy2[0], new Vector3(gameObject.transform.position.x - 3, gameObject.transform.position.y), Quaternion.identity);
+                GameObject game3 = Instantiate(h_BulletEnemy2[1], new Vector3(gameObject.transform.position.x, gameObject.transform.position.y+5), Quaternion.identity);
             }
             
         }

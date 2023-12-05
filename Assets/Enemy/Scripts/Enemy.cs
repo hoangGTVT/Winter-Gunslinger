@@ -38,15 +38,7 @@ public class Enemy : FindObject
     
     private void Awake()
     {
-        if (PlayerPrefs.GetFloat("LevelPlayer") < 10)
-        {
-            h_HPbonus = 50;
-        }
-        else if (PlayerPrefs.GetFloat("LevelPlayer") >= 10)
-        {
-            int hp = (int)PlayerPrefs.GetFloat("LevelPlayer");
-            h_HPbonus = (((hp / 10) + 1) * 50);
-        }
+        SetHpBonus();
     }
     void Start()
     {
@@ -62,12 +54,25 @@ public class Enemy : FindObject
     {
         FindPlayer();
         ShowText();
-       
+        
 
 
     }
 
-   
+   public void SetHpBonus()
+    {
+        if (PlayerPrefs.GetFloat("LevelPlayer") < 5)
+        {
+            h_HPbonus = 50;
+        }
+        else if (PlayerPrefs.GetFloat("LevelPlayer") >= 5)
+        {
+            int hp = (int)PlayerPrefs.GetFloat("LevelPlayer");
+            h_HPbonus = (((hp / 5) + 1) * 50);
+        }
+      
+        
+    }
     public void ShowText()
     {
         textMeshProUGUI[0].text = "/" + h_MaxHP;
@@ -178,7 +183,7 @@ public class Enemy : FindObject
             Instantiate(itemPrefab[0], transform.position, Quaternion.identity);
             h_ItemSpawn1 = true;
         }
-        float drop = 0.1f;
+        float drop = 0.5f;
         int randomNumber = Random.Range(0, 2);
         if (Random.value <= drop)
         {

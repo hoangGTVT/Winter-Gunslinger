@@ -23,7 +23,7 @@ public class BulletBoss1 : MonoBehaviour
             PlayerLife playerLife = collision.gameObject.GetComponent<PlayerLife>();
             if (playerLife != null)
             {
-                playerLife.PlayerTakeDamage(playerLife.GetTotalATK() + 30);
+                playerLife.PlayerTakeDamage(playerLife.GetTotalATK()-playerLife.GetLevel());
                 
                 Instantiate(blast, transform.position, Quaternion.identity);
                 Destroy(gameObject);
@@ -36,7 +36,7 @@ public class BulletBoss1 : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Instantiate(blast, transform.position, Quaternion.identity);
+            Instantiate(blast, new Vector3(transform.position.x,transform.position.y-1,transform.position.z) , Quaternion.identity);
             Destroy(gameObject);
         }
     }

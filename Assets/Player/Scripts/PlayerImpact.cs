@@ -15,7 +15,7 @@ public class PlayerImpact : FindObject
         if (collision.gameObject.CompareTag("Enemy"))
         {
 
-            playerLife.PlayerTakeDamage(playerLife.GetTotalHP() / 4);
+            playerLife.PlayerTakeDamage(playerLife.GetTotalHP() / 3);
         }
 
         

@@ -19,7 +19,7 @@ public class Loading : MonoBehaviour
     {
         if (h_Percent < 100)
         {
-            h_Percent += 0.15f;
+            h_Percent += 0.3f;
             loadingBar.SetValue((float)h_Percent);
             textMeshProUGUI.text = "" + (int)h_Percent + "%";
         }

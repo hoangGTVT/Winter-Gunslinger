@@ -13,6 +13,7 @@ public class Map : MonoBehaviour
         loadingMap.SetActive(true);
         Instantiate(player,new Vector2(pointX,pointY),Quaternion.identity);
         PauseGame();
+        PlayerPrefs.DeleteKey("Key");
     }
 
     // Update is called once per frame

@@ -23,10 +23,14 @@ public class PlayerManager : FindObject
     {
         FindPlayer();
         FindWeapon();
+
         
-       
+
+
 
     }
+
+   
     public void Create()
     {
         AudioManager.instance.Play("Button");
@@ -149,7 +153,7 @@ public class PlayerManager : FindObject
         textMeshProUGUI[9].text = "" + playerLife.GetGold();
         textMeshProUGUI[10].text=""+playerLife.GetHPPoint();
         textMeshProUGUI[11].text=""+ playerLife.GetMPPoint();
-        textMeshProUGUI[12].text=""+playerLife.GetKey();
+        textMeshProUGUI[12].text = "" + PlayerPrefs.GetInt("Key"); ;
         namePlayer[0].text = "" + PlayerPrefs.GetString("NamePlayer");
         namePlayer[1].text = "" + PlayerPrefs.GetString("NamePlayer");
     }

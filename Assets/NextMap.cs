@@ -24,8 +24,17 @@ public class NextMap : MonoBehaviour
             if(gameObject1 != null) {
                 Destroy(gameObject1);
             }
-            Destroy(gameObject1);
-            int kMap = PlayerPrefs.GetInt("KMap");
+            if (PlayerPrefs.GetInt("Map") < 4)
+            {
+                PlayerPrefs.SetInt("Map", PlayerPrefs.GetInt("Map") + 2);
+            }else if (PlayerPrefs.GetInt("Map") >= 4)
+            {
+                PlayerPrefs.SetInt("Map", PlayerPrefs.GetInt("Map") + 1);
+            }
+
+
+
+                int kMap = PlayerPrefs.GetInt("KMap");
             if(kMap < 1) { 
                 kMap = 0;
                 kMap += 1;

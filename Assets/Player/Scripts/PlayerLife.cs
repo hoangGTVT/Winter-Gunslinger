@@ -27,6 +27,8 @@ public class PlayerLife : FindObject
     [SerializeField] protected float h_GoldHP;
     [SerializeField] protected int h_LvHP;
 
+    [SerializeField] public int healMaxHP;
+
     // ATK
     [SerializeField] protected float h_MaxATK;
     
@@ -42,6 +44,8 @@ public class PlayerLife : FindObject
     [SerializeField] protected float h_CurrentEnergyFly;
     [SerializeField] protected float h_BonusEnegry;
     [SerializeField] protected int h_LvE;
+
+    [SerializeField] public int healMaxE;
 
     // DEF
     [SerializeField] protected float h_MaxDEF;
@@ -114,10 +118,42 @@ public class PlayerLife : FindObject
             PlusHPPoint();
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+
+            HealEnergy();
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+
+            HealHP();
+        }
+
+        HealMax();
 
         SetValue();
        
+    }
+
+    public void HealMax()
+    {
+
+        if (PlayerPrefs.GetFloat("LevelPlayer") <= 15)
+        {
+            healMaxHP = 200;
+            healMaxE = 50;
+
+        }
+        else if (PlayerPrefs.GetFloat("LevelPlayer") > 15 && (PlayerPrefs.GetFloat("LevelPlayer") < 30))
+        {
+            healMaxHP = 400;
+            healMaxE = 100;
+        }
+        else if ((PlayerPrefs.GetFloat("LevelPlayer") >= 30))
+        {
+            healMaxHP = 600;
+            healMaxE = 200;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -263,9 +299,9 @@ public class PlayerLife : FindObject
         }
 
         //Set ATK
-        if (PlayerPrefs.GetFloat("ATKPlayer") < 15)
+        if (PlayerPrefs.GetFloat("ATKPlayer") < 25)
         {
-            h_MaxATK = 15;
+            h_MaxATK = 25;
             PlayerPrefs.SetFloat("ATKPlayer", h_MaxATK);
         }
         else
@@ -502,13 +538,16 @@ public class PlayerLife : FindObject
     private IEnumerator HealEnegryEvery()
     {
         float healEnegry = 0;
-        while (healEnegry<50)
+
+        
+
+        while (healEnegry<healMaxE)
         {
             GameObject point = Instantiate(h_HpPopUp[1], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
             point.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "+" + 10;
 
             healEnegry += 10;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.3f);
             
                 h_CurrentEnergyFly += 10;
                 if (h_CurrentEnergyFly >h_TotalE)
@@ -633,7 +672,8 @@ public class PlayerLife : FindObject
     private IEnumerator HealHPEveryTime()
     {
         float heal = 0;
-        while(heal<200)
+        
+        while (heal<healMaxHP)
         {
             heal += 20;
             GameObject point = Instantiate(h_HpPopUp[0], new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), quaternion.identity);
@@ -644,7 +684,7 @@ public class PlayerLife : FindObject
                 h_CurrentHp = h_TotalHP;
 
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
     public float GetCurrentHP()
@@ -903,6 +943,7 @@ public class PlayerLife : FindObject
     public void PlusKey()
     {
         h_Key += 1;
+        PlayerPrefs.SetInt("Key", h_Key);
     }
 
     

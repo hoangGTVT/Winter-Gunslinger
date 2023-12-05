@@ -32,7 +32,10 @@ public class MenuEvent : MonoBehaviour
             LoadSence();  
         }
     }
-
+    public void ResetGame()
+    {
+        PlayerPrefs.DeleteAll();
+    }
     public void SetName()
     {
         h_NamePlayer = inputField.text;
@@ -116,5 +119,11 @@ public class MenuEvent : MonoBehaviour
             gameObjects1[0].SetActive(true);
         }
         
+    }
+
+    public void SetKmap()
+    {
+        PlayerPrefs.SetInt("KMap", 3);
+
     }
 }

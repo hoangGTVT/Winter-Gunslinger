@@ -22,7 +22,7 @@ public class BringerSpell : MonoBehaviour
         Collider2D col= Physics2D.OverlapCircle(pos, attackRange, attackMask);
         if (col != null)
         {
-            col.GetComponent<PlayerLife>().PlayerTakeDamage(col.GetComponent<PlayerLife>().GetTotalATK()+50);
+            col.GetComponent<PlayerLife>().PlayerTakeDamage(col.GetComponent<PlayerLife>().GetTotalATK()- col.GetComponent<PlayerLife>().GetLevel());
         }
     }
 }
